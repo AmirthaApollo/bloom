@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<title>Product · Bloom</title>
+<meta name="description" content="Product detail · Bloom marketplace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260916j">
+<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+<style>
+.gallery-main.fading img { opacity: .35; transition: opacity .22s; }
+.p-wishlist.liked { background: var(--blush); color: var(--rose); border-color: #e9c8b4; }
+.p-wishlist .heart-ico { margin-right: 6px; }
+</style>
+</head>
+<body data-page="product">
+
+<div id="app-header"></div>
+
+<main class="product-page">
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><a href="shop.html">Shop</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span>
+      <span class="crumb-cat"></span><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><span class="crumb-current">Product</span>
+    </nav>
+
+    <div class="product-layout">
+
+      <!-- ====== GALLERY ====== -->
+      <div class="gallery">
+        <div class="gallery-main">
+          <div class="badges"></div>
+          <img id="main-img" src="" alt="">
+          <small class="zoom-hint">hover to zoom</small>
+        </div>
+        <div class="gallery-thumbs"></div>
+        <p class="gallery-tag"><span data-icon="leaf" data-icon-class="i-sm"></span> Responsible materials · made in small batches</p>
+      </div>
+
+      <!-- ====== INFO ====== -->
+      <div class="product-info">
+        <p class="p-brand"></p>
+        <h1></h1>
+        <div class="p-tags"></div>
+        <div class="p-price"></div>
+        <div class="p-meta-row">
+          <span class="stars"></span>
+          <a class="reviews-count" href="#reviews" style="margin-left:8px">…</a>
+          <span class="p-stock"></span>
+        </div>
+
+        <div class="opt-block opt-label">
+          <span>Select size</span><button type="button" class="size-guide-btn">Size guide <span class="chev" data-icon="chev" data-icon-class="i-sm"></span></button>
+        </div>
+        <div class="size-chips"></div>
+        <div class="size-guide-panel" style="display:none"></div>
+
+        <div class="opt-block opt-label">
+          <span>Select colour</span>
+        </div>
+        <div class="color-chips"></div>
+        <div class="color-value"></div>
+
+        <div class="opt-block qty-block">
+          <span class="opt-label" style="margin:0">Quantity</span>
+          <div class="qty">
+            <button data-qdec aria-label="Decrease quantity" type="button">−</button>
+            <span class="qty-val">1</span>
+            <button data-qinc aria-label="Increase quantity" type="button">+</button>
+          </div>
+        </div>
+
+        <div class="p-actions">
+          <button class="btn btn-primary btn-lg p-add-cart">Add to cart</button>
+          <button class="btn btn-rose btn-lg p-buy-now">Buy now</button>
+          <button class="btn p-wishlist" title="Add to wishlist"><span class="wish-ico" data-icon="heart"></span> Wishlist</button>
+        </div>
+
+        <div class="p-usp" style="margin-top:18px">
+          <span><span data-icon="leaf" data-icon-class="i-sm"></span> Free delivery over ₹4,999</span>
+          <span><span data-icon="back" data-icon-class="i-sm"></span> 30-day returns</span>
+          <span><span data-icon="check" data-icon-class="i-sm"></span> In stock</span>
+        </div>
+
+        <div class="pincode">
+          <span class="pin-ico" data-icon="pin" data-icon-class="i-sm"></span>
+          <span style="color:var(--muted)">Check delivery to your pincode</span>
+          <input class="pin-input" inputmode="numeric" maxlength="6" placeholder="e.g. 560001" aria-label="Pincode">
+          <button class="pin-check" type="button">Check</button>
+          <span class="pin-msg"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ====== TABS ====== -->
+  <div class="container" style="padding-top:50px">
+    <div class="tablist" role="tablist" id="tabbar">
+      <button class="tab on" role="tab" data-tab="details">Details</button>
+      <button class="tab" role="tab" data-tab="reviews" id="reviews-tab">Reviews</button>
+    </div>
+
+    <div class="tab-panel" data-tab="details" role="tabpanel">
+      <h3 style="font-size:1.35rem">About this piece</h3>
+      <p style="margin-top:10px;color:var(--ink)"></p>
+      <p style="margin-top:14px;color:var(--muted)">Each Bloom piece is chosen for how it wears, sits and softens over time. If it isn’t perfect, our 30-day returns are free · no questions, no dreaded forms.</p>
+      <table class="p-details-table" style="max-width:560px;margin-top:18px">
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div class="tab-panel" data-tab="reviews" role="tabpanel" style="display:none">
+      <h3 style="font-size:1.35rem">Ratings &amp; reviews</h3>
+      <p style="color:var(--muted);margin-top:6px"><span class="rv-total">…</span> · verified Bloom buyers</p>
+      <div class="review-list" style="margin-top:14px"></div>
+
+      <form class="review-form">
+        <h4>Write a review</h4>
+        <div class="rate-input">
+          <span style="color:var(--muted);font-size:.86rem">Your rating:</span>
+          <button type="button" class="star-btn" data-icon="star"></button><button type="button" class="star-btn" data-icon="star"></button><button type="button" class="star-btn" data-icon="star"></button><button type="button" class="star-btn" data-icon="star"></button><button type="button" class="star-btn" data-icon="star"></button>
+        </div>
+        <label class="field"><span>Name</span><input type="text" name="rv-name" placeholder="Your name"></label>
+        <label class="field"><span>Review</span><textarea name="rv-text" placeholder="What did you love about it? How does it fit?"></textarea></label>
+        <button class="btn btn-primary" type="submit">Submit review</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ====== RELATED ====== -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">you may also like</span>
+        <h2>Pairs beautifully with</h2>
+      </div>
+      <div class="products-grid related-grid"></div>
+    </div>
+  </section>
+
+  <div class="divider-flourish"><span data-icon="sprig" data-icon-class="i-sm"></span><span data-icon="flower" data-icon-class="i-sm"></span><span data-icon="sprig" data-icon-class="i-sm"></span></div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916j"></script>
+<script src="js/marketplace.js?v=20260916j"></script>
+<script src="js/app.js?v=20260916j"></script>
+<script src="js/cart.js?v=20260916j"></script>
+<script src="js/wishlist.js?v=20260916j"></script>
+<script src="js/product.js?v=20260916j"></script>
+<script>App.boot()</script>
+</body>
+</html>

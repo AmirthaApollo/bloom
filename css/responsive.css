@@ -1,0 +1,149 @@
+/* ============================================================
+   Bloom · Responsive stylesheet
+   ============================================================ */
+
+/* ---------- <= 1200px ---------- */
+@media (max-width: 1200px) {
+  .cat-grid { grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); }
+  .perks { grid-template-columns: repeat(2, 1fr); }
+  .cart-layout, .checkout-layout { grid-template-columns: 1fr; }
+  .cart-summary-card, .co-summary { position: static; }
+}
+
+/* ---------- <= 1024px ---------- */
+@media (max-width: 1024px) {
+  .hero-grid { grid-template-columns: 1fr; }
+  .hero-visual img { height: 440px; }
+  .hero-card { position: static; margin-top: 14px; max-width: 100%; }
+
+  .product-layout { grid-template-columns: 1fr; }
+  .gallery { position: static; }
+  .gallery-main { aspect-ratio: 1/1.06; }
+
+  .acct-layout { grid-template-columns: 1fr; }
+  .acct-nav { position: static; display: flex; flex-wrap: wrap; }
+  .acct-nav .acct-face { flex: none; }
+  .acct-nav a { flex: 1 1 auto; }
+
+  .footer-grid { grid-template-columns: repeat(2, 1fr); }
+
+  .feature-media, .feature-copy { grid-column: span 12; }
+  .feature-media { height: 380px; }
+
+  .shop-layout { grid-template-columns: 1fr; }
+  .filter-panel { display: none; }
+  .filter-drawer { display: block; }
+
+  .checkout-success .eta-row { width: 100%; }
+}
+
+/* ---------- <= 768px ---------- */
+@media (max-width: 768px) {
+  :root { --nav-h: 64px; }
+
+  .container { width: min(1240px, 100% - 32px); }
+  body { font-size: 15px; }
+
+  h1 { font-size: clamp(2rem, 7vw, 2.7rem); }
+  h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
+
+  .nav-links, .mega { display: none; }
+  .nav-action.nav-mobile-toggle { display: inline-flex; }
+  .sticky .nav-search { inset: calc(100% + 12px) 16px auto auto; width: calc(100% - 32px); }
+
+  .hero { padding: 54px 0 60px; }
+  .hero-cta .btn { flex: 1 1 auto; }
+  .hero-note { flex-wrap: wrap; }
+
+  .cat-grid { grid-template-columns: repeat(2, 1fr); }
+  .products-grid { grid-template-columns: repeat(auto-fill, minmax(158px, 1fr)); gap: 18px; }
+
+  .editorial-grid { grid-template-columns: 1fr; }
+
+  .cart-table .thead { display: none; }
+  .cart-row { grid-template-columns: 76px 1fr auto; grid-template-rows: auto auto auto; gap: 8px; }
+  .cart-row img { width: 76px; height: 94px; }
+  .cart-row .ci-quantity-wrap { justify-self: start; }
+  .cart-row .ci-price { font-size: .92rem; }
+  .cart-row .ci-sub { font-weight: 800; font-size: 1rem; }
+  .cart-row .ci-remove { width: 30px; height: 30px; }
+
+  .checkout-layout .co-summary { order: -1; }
+
+  .acct-nav a { padding: 11px 12px; font-size: .9rem; }
+  .acct-nav a svg { width: 20px; height: 20px; }
+  .acct-nav .acct-face { flex-basis: 100%; }
+
+  .steps .step span { font-size: .82rem; }
+  .steps .step { padding: 7px 12px; }
+
+  .newsletter form { flex-direction: column; }
+  .newsletter form input, .newsletter form button { width: 100%; }
+
+  .perks { grid-template-columns: 1fr; gap: 18px; }
+
+  .gallery-thumbs button { width: 62px; height: 78px; }
+  .p-actions { flex-direction: column; }
+  .p-actions .btn { width: 100%; }
+
+  .checkout-success { padding: 34px 18px; }
+}
+
+/* ---------- <= 520px ---------- */
+@media (max-width: 520px) {
+  .cat-grid { gap: 12px; }
+  .products-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .product-card .card-body a.name { font-size: .98rem; }
+  .card-actions .btn { font-size: .8rem; padding: 10px 14px; }
+  .wish-heart { width: 32px; height: 32px; }
+  .card-inner .thumb { padding-top: 126%; }
+
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer .logo { font-size: 1.3rem; }
+
+  .col2 { grid-template-columns: 1fr; }
+  .pincode { flex-direction: column; align-items: stretch; }
+  .pincode input { width: 100%; }
+
+  .hero-cta .btn { width: 100%; }
+  .nav-search { padding: 12px 12px; }
+  .announce span { font-size: .74rem; }
+
+  .cart-row .ci-remove { width: 26px; height: 26px; }
+
+  .modal-box { padding: 20px 20px; }
+
+  .size-chips .chip { padding: 8px 11px; }
+  .color-chips { gap: 8px; }
+
+  .features-list { }
+}
+
+/* ---------- Print (optional, keeps it clean) ---------- */
+@media print {
+  .sticky, .footer, .toasts, .cart-drawer, .drawer-veil, .nav-actions { display: none; }
+  body { background: #fff; color: #000; }
+}
+
+/* ---------- Sell on Bloom / university selector ---------- */
+@media (max-width: 1024px) {
+  .sell-split, .dash-grid { grid-template-columns: 1fr; }
+  .seller-side { position: static; }
+}
+@media (max-width: 768px) {
+  .logo small { display: none; }
+  .logo { font-size: 1.32rem; }
+  .nav-left { gap: 10px; }
+  .uni-btn { height: 34px; padding: 0 9px; font-size: .8rem; gap: 6px; }
+  .uni-name { display: inline-block; max-width: 74px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .uni-chev svg { width: 11px; height: 11px; }
+  .nav-action { width: 34px; height: 34px; }
+  .nav-action .nav-emoji svg { width: 17px; height: 17px; }
+  .nav-actions { gap: 2px; }
+  .nav-actions .dropdown { display: none; }
+  .listing-row { grid-template-columns: 48px 1fr; row-gap: 8px; }
+  .listing-row img { width: 48px; height: 58px; }
+  .listing-row .listing-status { grid-column: 2; justify-self: start; }
+  .listing-row .listing-actions { grid-column: 2; justify-content: flex-start; }
+  .success-actions .btn { width: 100%; }
+}

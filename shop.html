@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<title>Shop all · Bloom</title>
+<meta name="description" content="Browse the full Bloom marketplace.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260916j">
+<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+</head>
+<body data-page="shop">
+
+<div id="app-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><a href="shop.html">Shop</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><span class="crumb-current">Shop</span>
+    </nav>
+  </div>
+
+  <section class="page-hero">
+    <span class="deco-leaf-tl" data-icon="sprig"></span>
+    <span class="deco-leaf-c" style="right:3%;bottom:6%" data-icon="leaf"></span>
+    <div class="container">
+      <p class="eyebrow">the full edit</p>
+      <h1 class="shop-title">All products</h1>
+      <p>Every bloom, every season · one considered collection.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="shop-layout">
+
+        <!-- ====== SIDEBAR FILTERS (desktop) ====== -->
+        <aside class="filter-panel" aria-label="Filters"></aside>
+
+        <!-- ====== MOBILE FILTER DRAWER ====== -->
+        <div class="filter-veil"></div>
+        <aside class="filter-drawer" aria-label="Filters (mobile)">
+          <div class="drawer-head">
+            <h3>Filters</h3>
+            <button class="btn-icon drawer-close" aria-label="Close filters" data-icon="close" data-icon-class="i-sm"></button>
+          </div>
+          <div class="filter-body"></div>
+          <button class="btn btn-rose btn-block btn-apply">Show results</button>
+        </aside>
+
+        <!-- ====== PRODUCTS ====== -->
+        <div>
+          <div class="shop-toolbar">
+            <span class="count shop-count">0 products</span>
+            <span class="spacer"></span>
+            <input type="search" class="shop-search-input" placeholder="Search in results…" aria-label="Search within results">
+            <select class="sort-select" aria-label="Sort products">
+              <option value="popular">Sort: Featured</option>
+              <option value="newest">Sort: Newest</option>
+              <option value="price-asc">Price: Low to High</option>
+              <option value="price-desc">Price: High to Low</option>
+              <option value="rating">Top rated</option>
+            </select>
+            <button class="btn btn-outline btn-sm" data-filter-open>Filter</button>
+            <div class="view-toggle" role="group" aria-label="View mode">
+              <button type="button" class="on" data-view="grid" title="Grid view" data-icon="grid" data-icon-class="i-sm"></button>
+              <button type="button" data-view="list" title="List view" data-icon="list" data-icon-class="i-sm"></button>
+            </div>
+          </div>
+
+          <div class="products-grid" style="margin-top:26px"></div>
+
+          <div class="no-results" style="display:none">
+            <div class="flower-big" data-icon="flower" data-icon-class="i-xl"></div>
+            <h3>Nothing in this patch right now</h3>
+            <p>Try clearing a filter or two · or search for something like “linen” or “silver”.</p>
+            <button class="btn btn-primary" data-reset-empty>Clear all filters</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916j"></script>
+<script src="js/marketplace.js?v=20260916j"></script>
+<script src="js/app.js?v=20260916j"></script>
+<script src="js/cart.js?v=20260916j"></script>
+<script src="js/wishlist.js?v=20260916j"></script>
+<script src="js/shop.js?v=20260916j"></script>
+<script>
+  /* reset button in no-results */
+  document.querySelectorAll('[data-reset-empty]').forEach(b => b.addEventListener('click', () => {
+    window.Shop && Shop.S && Shop.S.search !== undefined && (Shop.S.search = '');
+    location.href = 'shop.html';
+  }));
+</script>
+<script>App.boot()</script>
+</body>
+</html>

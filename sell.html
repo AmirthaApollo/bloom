@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sell on Bloom · Become a Creator</title>
+<meta name="description" content="List your items on Bloom, the student marketplace. Sell to students on your campus with an on-campus handoff.">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body data-page="sell">
+
+<div id="app-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><span class="crumb-current">Sell on Bloom</span>
+    </nav>
+  </div>
+
+  <!-- ================= HERO ================= -->
+  <section class="page-hero sell-hero">
+    <span class="deco-leaf-tl" data-icon="sprig"></span>
+    <span class="deco-flower" data-icon="flower"></span>
+    <div class="container">
+      <p class="eyebrow">become a creator</p>
+      <h1>Sell on Bloom</h1>
+      <p>The student-to-student marketplace for your campus. List something you no longer need, and hand it over in person.</p>
+      <div class="sell-hero-cta">
+        <a class="btn btn-primary btn-lg" href="#list">List an item <span class="btn-ic" data-icon="plus" data-icon-class="i-sm"></span></a>
+        <a class="btn btn-outline btn-lg" href="shop.html">Browse the marketplace</a>
+      </div>
+      <div class="sell-uni-chip"><span data-icon="pin" data-icon-class="i-xs"></span> Live at <b id="sell-uni">Ashoka University</b></div>
+    </div>
+  </section>
+
+  <!-- ================= HOW IT WORKS ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <span class="eyebrow">simple, safe, on campus</span>
+        <h2>How it works</h2>
+        <p>Five steps from listing to handoff. No shipping, no strangers off campus.</p>
+      </div>
+      <div class="steps-grid">
+        <article class="step-card">
+          <span class="step-num">1</span>
+          <span class="step-ico" data-icon="edit" data-icon-class="i"></span>
+          <h3>List your item</h3>
+          <p>Add your product details, photos, price and category. It appears in the marketplace instantly.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">2</span>
+          <span class="step-ico" data-icon="bag" data-icon-class="i"></span>
+          <h3>A student places an order</h3>
+          <p>Another student checks out. The item is reserved and becomes unavailable right away.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">3</span>
+          <span class="step-ico" data-icon="orders" data-icon-class="i"></span>
+          <h3>Bloom notifies you</h3>
+          <p>You receive an order notification in your seller dashboard the moment it sells.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">4</span>
+          <span class="step-ico" data-icon="truck" data-icon-class="i"></span>
+          <h3>Coordinate delivery</h3>
+          <p>We email you so you can arrange an on-campus handoff with the buyer, at a time that suits you both.</p>
+        </article>
+        <article class="step-card">
+          <span class="step-num">5</span>
+          <span class="step-ico" data-icon="check" data-icon-class="i"></span>
+          <h3>Item is removed</h3>
+          <p>Once ordered, the item is automatically removed from the marketplace so no one else can buy it.</p>
+        </article>
+      </div>
+      <p class="sim-banner"><span data-icon="check" data-icon-class="i-xs"></span> This is a frontend demo. Orders, notifications and emails are simulated locally. No real payments, accounts or emails.</p>
+    </div>
+  </section>
+
+  <!-- ================= LIST AN ITEM ================= -->
+  <section class="section" id="list">
+    <div class="container">
+      <div class="sell-split">
+        <div>
+          <div class="section-head" style="text-align:left">
+            <span class="eyebrow">list in a minute</span>
+            <h2>List an item</h2>
+            <p>Fill this in to publish a listing to the marketplace. It’s added right away, so you can see it in the shop.</p>
+          </div>
+          <form class="sell-form" id="sell-form">
+            <label class="field"><span>Item name</span><input type="text" name="name" placeholder="e.g. White Co-ord Set" required></label>
+            <div class="col2">
+              <label class="field"><span>Category</span><select name="category" required></select></label>
+              <label class="field"><span>Subcategory</span><input type="text" name="subcategory" placeholder="e.g. Co-ords"></label>
+              <label class="field"><span>Price (₹)</span><input type="number" name="price" min="1" step="1" placeholder="1200" required></label>
+              <label class="field"><span>Condition</span>
+                <select name="condition">
+                  <option>New with tags</option>
+                  <option selected>Like new</option>
+                  <option>Gently used</option>
+                  <option>Well loved</option>
+                </select>
+              </label>
+              <label class="field"><span>Size (optional)</span><input type="text" name="size" placeholder="M / UK 6 / One Size"></label>
+              <label class="field"><span>Photo</span><select name="image" id="sell-image"></select></label>
+            </div>
+            <label class="field"><span>Description</span><textarea name="description" placeholder="Tell buyers about the item — fit, flaws, why you love it."></textarea></label>
+            <button class="btn btn-primary btn-lg" type="submit">Publish listing <span class="btn-ic" data-icon="arrow" data-icon-class="i-sm"></span></button>
+          </form>
+        </div>
+
+        <aside class="seller-side">
+          <div class="seller-card">
+            <h3><span data-icon="orders" data-icon-class="i-sm"></span> Why students sell on Bloom</h3>
+            <ul class="seller-points">
+              <li><span data-icon="check" data-icon-class="i-xs"></span> Reach buyers on your own campus</li>
+              <li><span data-icon="check" data-icon-class="i-xs"></span> No shipping, no packing</li>
+              <li><span data-icon="check" data-icon-class="i-xs"></span> Hand over in person, on your schedule</li>
+              <li><span data-icon="check" data-icon-class="i-xs"></span> Free to list, always</li>
+            </ul>
+            <button class="btn btn-light btn-block" type="button" id="sample-email-btn">Preview a sample seller email</button>
+          </div>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= SELLER DASHBOARD ================= -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head" style="text-align:left">
+        <span class="eyebrow">your seller space</span>
+        <h2>Seller dashboard</h2>
+        <p>A simulated view of what a seller sees: notifications and live listings.</p>
+      </div>
+
+      <div class="dash-grid">
+        <div class="dash-col">
+          <div class="dash-head">
+            <h3><span data-icon="orders" data-icon-class="i-sm"></span> Notifications</h3>
+            <div class="dash-actions">
+              <button class="btn btn-ghost btn-sm" type="button" id="notes-read">Mark all read</button>
+              <button class="btn btn-ghost btn-sm" type="button" id="notes-clear">Clear</button>
+            </div>
+          </div>
+          <div class="notes-list" id="notes-list"></div>
+        </div>
+
+        <div class="dash-col">
+          <div class="dash-head">
+            <h3><span data-icon="tag" data-icon-class="i-sm"></span> Your listings</h3>
+            <span class="dash-count" id="listings-count">0</span>
+          </div>
+          <div class="listings-list" id="listings-list"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916j"></script>
+<script src="js/marketplace.js?v=20260916j"></script>
+<script src="js/app.js?v=20260916j"></script>
+<script src="js/cart.js?v=20260916j"></script>
+<script src="js/wishlist.js?v=20260916j"></script>
+<script src="js/sell.js?v=20260916j"></script>
+<script>App.boot()</script>
+</body>
+</html>

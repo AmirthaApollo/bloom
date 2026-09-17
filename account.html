@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<title>My account · Bloom</title>
+<meta name="description" content="Manage your Bloom account, orders and saved items.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260916j">
+<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+</head>
+<body data-page="account">
+
+<div id="app-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span><span class="crumb-current">Account</span>
+    </nav>
+  </div>
+
+  <section class="page-hero">
+    <span class="deco-leaf-tl" data-icon="sprig"></span>
+    <span class="deco-leaf-c" style="right:3%;bottom:6%" data-icon="leaf"></span>
+    <div class="container">
+      <p class="eyebrow">the private garden</p>
+      <h1>My account</h1>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="acct-layout">
+
+        <!-- ====== SIDE NAV ====== -->
+        <nav class="acct-nav" aria-label="Account sections">
+          <div class="acct-face">
+            <span class="avatar acct-avatar-big" data-icon="flower"></span>
+            <b>Bloom member</b>
+            <small>iris@bloom.shop · joined '24</small>
+          </div>
+          <a href="#" data-tab="profile" class="on"><span class="acct-ico" data-icon="user"></span> Profile</a>
+          <a href="#" data-tab="orders"><span class="acct-ico" data-icon="orders"></span> My orders</a>
+          <a href="#" data-tab="wishlist"><span class="acct-ico" data-icon="heart"></span> Wishlist</a>
+          <a href="#" data-tab="addresses"><span class="acct-ico" data-icon="home"></span> Saved addresses</a>
+          <a href="#" data-tab="payments"><span class="acct-ico" data-icon="card"></span> Payment methods</a>
+          <a href="#" data-tab="settings"><span class="acct-ico" data-icon="settings"></span> Settings</a>
+          <a href="index.html" data-logout style="color:var(--danger)"><span><span class="acct-ico" data-icon="logout"></span></span> Log out</a>
+        </nav>
+
+        <!-- ====== PANELS ====== -->
+        <div class="acct-panels">
+
+          <div class="acct-panel on" data-panel="profile">
+            <h2>Profile</h2>
+            <p class="panel-sub">The face and the facts.</p>
+            <div class="profile-grid">
+              <div class="profile-card">
+                <h3>Your details</h3>
+                <form class="profile-form">
+                  <label class="field"><span>First name</span><input type="text" name="fname" value="Iris" placeholder="First name"></label>
+                  <label class="field"><span>Last name</span><input type="text" name="lname" value="Sharma" placeholder="Last name"></label>
+                  <label class="field"><span>Email</span><input type="email" name="email" value="iris@bloom.shop"></label>
+                  <label class="field"><span>Phone</span><input type="tel" name="phone" value="98765 43210"></label>
+                  <button class="btn btn-primary" type="submit">Save changes</button>
+                </form>
+              </div>
+              <div class="profile-card">
+                <h3>Your bloom avatar</h3>
+                <div class="avatar-edit">
+                  <span class="avatar acct-avatar-big" style="font-size:2rem" data-icon="flower"></span>
+                  <div>
+                    <p style="color:var(--muted);font-size:.88rem">Pick a flower that matches your mood.</p>
+                    <button class="btn btn-light btn-sm" data-change-avatar type="button">Change avatar</button>
+                  </div>
+                </div>
+                <h3 style="margin-top:20px">Newsletter</h3>
+                <p style="color:var(--muted);font-size:.88rem">You’re subscribed to the Bloom letters. <b style="color:var(--good)">On</b>.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="acct-panel" data-panel="orders">
+            <h2>My orders</h2>
+            <p class="panel-sub">Everything you’ve ever wrapped up.</p>
+            <div class="orders-wrap" style="margin-top:14px"></div>
+          </div>
+
+          <div class="acct-panel" data-panel="wishlist">
+            <h2>Wishlist</h2>
+            <p class="panel-sub"><span class="wishlist-count">0 items</span> saved for later.</p>
+            <div class="acct-wishlist-wrap" style="margin-top:16px"></div>
+          </div>
+
+          <div class="acct-panel" data-panel="addresses">
+            <h2>Saved addresses</h2>
+            <p class="panel-sub">Your delivery spots, kept tidy.</p>
+            <div class="addresses-wrap" style="margin-top:16px;display:grid;gap:16px"></div>
+          </div>
+
+          <div class="acct-panel" data-panel="payments">
+            <h2>Payment methods</h2>
+            <p class="panel-sub">Cards and accounts on file.</p>
+            <div class="payments-wrap" style="margin-top:16px;display:grid;gap:16px"></div>
+          </div>
+
+          <div class="acct-panel" data-panel="settings">
+            <h2>Settings</h2>
+            <p class="panel-sub">Tune Bloom to taste.</p>
+            <form class="settings-form" style="margin-top:14px">
+              <div class="profile-card">
+                <h3>Notifications</h3>
+                <label class="filter-check"><input type="checkbox" data-setting="restock"><span><b>Restock alerts</b> <small style="color:var(--muted)">let me know when saved sizes return</small></span></label>
+                <label class="filter-check"><input type="checkbox" data-setting="weekly" checked><span><b>Weekly Bloom letter</b> <small style="color:var(--muted)">the good, small-brand finds</small></span></label>
+                <label class="filter-check"><input type="checkbox" data-setting="sale"><span><b>Sale whispers</b> <small style="color:var(--muted)">private access to markdowns</small></span></label>
+              </div>
+              <div class="profile-card">
+                <h3>Privacy</h3>
+                <label class="filter-check"><input type="checkbox" data-setting="personalised"><span><b>Personalised picks</b> <small style="color:var(--muted)">recommendations from your browsing</small></span></label>
+                <label class="filter-check"><input type="checkbox" data-setting="third"><span><b>Data sharing</b> <small style="color:var(--muted)">share aggregated data with partners</small></span></label>
+              </div>
+              <button class="btn btn-primary" type="submit">Save settings</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916j"></script>
+<script src="js/marketplace.js?v=20260916j"></script>
+<script src="js/app.js?v=20260916j"></script>
+<script src="js/cart.js?v=20260916j"></script>
+<script src="js/wishlist.js?v=20260916j"></script>
+<script>App.applyAvatar();</script>
+<script>App.boot()</script>
+</body>
+</html>
