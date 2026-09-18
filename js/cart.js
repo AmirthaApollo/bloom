@@ -8,8 +8,8 @@
 
   const KEY = 'bloom_cart_v1';
   const COUPON_KEY = 'bloom_coupon_v1';
-  const FREE_SHIP_THRESHOLD = 4999;
-  const FIXED_DELIVERY = 499;
+  const FREE_SHIP_THRESHOLD = 0;
+  const FIXED_DELIVERY = 0;
 
   let state = { items: [], coupon: null };
 
@@ -153,7 +153,7 @@
     },
 
     notifyAdded(name, imgSrc, qty) {
-      const freeNote = Cart.deliveryFee() === 0 ? '<small>You’ve unlocked free delivery</small>' : '';
+      const freeNote = '<small>Campus pickup · coordinate on campus</small>';
       App.toastHTML(`
         <img src="${imgSrc}" alt="" class="toast-thumb">
         <span><b>Added to your bag</b>${App.esc(name)}${freeNote}</span>`);
@@ -328,15 +328,15 @@ renderCartTable(rowsEl, summaryEl, emptyEl) {
           </div><p class="coupon-error" style="display:none"></p>`;
         if (c) couponHtml = `<div class="coupon-applied"><span>${App.icon('tag', 'i-xs')} ${App.esc(c.code)} · ${App.esc(c.label)}</span><button class="remove-coupon">remove</button></div>`;
 
-        const feeLine = fee === 0 ? `<b style="color:var(--good)">FREE</b>` : App.money(fee);
-        const freeShip = sub < FREE_SHIP_THRESHOLD && fee !== 0 ? `<span>Add <b>${App.money(FREE_SHIP_THRESHOLD - sub)}</b> more for free delivery</span>` : `<b>Free delivery unlocked</b>`;
+        const feeLine = `<b style="color:var(--good)">FREE</b>`;
+        const freeShip = `<b>Campus pickup only · no shipping, no waiting</b>`;
 
         summaryEl.innerHTML = `
           <h3>Order summary</h3>
           <div class="sum-row"><span>Subtotal</span><b>${App.money(sub)}</b></div>
           <div class="sum-row">${couponHtml}</div>
           <div class="sum-row"><span>Discount</span><b class="disc-amount">${disc ? '−' + App.money(disc) : App.money(0)}</b></div>
-          <div class="sum-row"><span>Delivery</span>${feeLine}</div>
+          <div class="sum-row"><span>Campus pickup</span>${feeLine}</div>
           <div class="free-ship-note">${wrapTruck()}${freeShip}</div>
           <div class="sum-total"><span>Total</span><b>${App.money(total)}</b></div>
           <div class="cart-actions">

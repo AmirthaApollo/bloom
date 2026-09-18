@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<title>Contact us · Bloom</title>
+<meta name="description" content="Get in touch with the Bloom student marketplace team.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260916z">
+<link rel="stylesheet" href="css/responsive.css?v=20260916z">
+</head>
+<body data-page="help">
+
+<div id="app-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span>
+      <a href="info.html">Help &amp; info</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span>
+      <span class="crumb-current">Contact us</span>
+    </nav>
+  </div>
+
+  <section class="page-hero">
+    <span class="deco-leaf-tl" data-icon="sprig"></span>
+    <span class="deco-leaf-c" style="right:3%;bottom:6%" data-icon="leaf"></span>
+    <div class="container">
+      <p class="eyebrow">help centre</p>
+      <h1>Contact us</h1>
+      <p>We are students too, so we keep it simple.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="info-layout">
+        <aside class="info-toc" aria-label="Help pages">
+          <a href="info.html">Help &amp; info</a>
+          <a href="delivery.html">Delivery &amp; returns</a>
+          <a href="track.html">Track an order</a>
+          <a href="size-guide.html">Size guide</a>
+          <a href="care.html">Care guide</a>
+          <a href="contact.html" class="on">Contact us</a>
+        </aside>
+
+        <div class="info-content">
+          <article class="info-section">
+            <span class="info-ico" data-icon="send" data-icon-class="i-sm"></span>
+            <h2>Send us a message</h2>
+            <p>We reply within a day during term time. This is a demo, so your message stays on this device.</p>
+            <form class="contact-form" id="contact-form">
+              <div class="col2">
+                <label class="field"><span>Your name</span><input type="text" name="name" placeholder="Your name" required></label>
+                <label class="field"><span>Email</span><input type="email" name="email" placeholder="you@ashoka.edu.in" required></label>
+              </div>
+              <label class="field"><span>Topic</span>
+                <select name="topic">
+                  <option>An order or handoff</option>
+                  <option>Selling on Bloom</option>
+                  <option>Sizes or an item</option>
+                  <option>Report a problem</option>
+                  <option>Something else</option>
+                </select>
+              </label>
+              <label class="field"><span>Message</span><textarea name="message" placeholder="How can we help?" required></textarea></label>
+              <button class="btn btn-primary" type="submit">Send message</button>
+            </form>
+          </article>
+
+          <article class="info-section">
+            <span class="info-ico" data-icon="user" data-icon-class="i-sm"></span>
+            <h2>Other ways to reach us</h2>
+            <ul class="info-list">
+              <li>General help · <b>help@bloom.marketplace</b></li>
+              <li>Orders &amp; handoffs · <b>orders@bloom.marketplace</b></li>
+              <li>Selling on Bloom · <b>sellers@bloom.marketplace</b></li>
+              <li>Find us on campus at the Ashoka University student commons.</li>
+            </ul>
+            <a class="btn btn-outline" href="sell.html">Sell on Bloom <span class="btn-ic" data-icon="arrow" data-icon-class="i-sm"></span></a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-flourish"><span data-icon="sprig" data-icon-class="i-sm"></span><span data-icon="flower" data-icon-class="i-sm"></span><span data-icon="sprig" data-icon-class="i-sm"></span></div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script>
+  (function () {
+    var form = document.getElementById('contact-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      window.App.toast('Message sent · we will reply within a day. (simulated)', 'success');
+      form.reset();
+    });
+  })();
+</script>
+<script>App.boot()</script>
+</body>
+</html>

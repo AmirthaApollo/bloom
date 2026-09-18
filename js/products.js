@@ -13,8 +13,11 @@
       brand: "Charmpad Studio",
       category: "shoes",
       subcategory: "Heels",
-      price: 6140,
-      originalPrice: 8220,
+      price: 950,
+      condition: "Good",
+      listedDaysAgo: 4,
+      seller: { name: "Aditi Rao", username: "aditi.r", email: "aditi.r@ashoka.edu.in", rating: 4.9, sales: 31, responseRate: 98, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 64,
       popularity: 78,
@@ -23,7 +26,7 @@
       colors: ["Burgundy","Black"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/maryjanes-burgundy.jpg"],
-      description: "Burgundy Patent Slingback Mary Janes · handcrafted heels, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Burgundy Patent Slingback Mary Janes · Good condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "alibox-gift-bundle",
@@ -31,7 +34,10 @@
       brand: "Swadeshi Wares",
       category: "shoes",
       subcategory: "Flats",
-      price: 2980,
+      price: 750,
+      condition: "Like New",
+      listedDaysAgo: 12,
+      seller: { name: "Ananya Iyer", username: "ananya.i", email: "ananya.i@ashoka.edu.in", rating: 4.8, sales: 12, responseRate: 95, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 41,
@@ -41,7 +47,7 @@
       colors: ["Black"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/alibox-gift-bundle.jpg"],
-      description: "Embroidered Black Lace Shoes · handcrafted flats, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Embroidered Black Lace Shoes · Like New condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "vangogh-sunflower-earrings",
@@ -49,8 +55,11 @@
       brand: "Atelier Moti",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 3480,
-      originalPrice: 4640,
+      price: 600,
+      condition: "Excellent",
+      listedDaysAgo: 9,
+      seller: { name: "Rhea Kapoor", username: "rhea.k", email: "rhea.k@ashoka.edu.in", rating: 4.7, sales: 19, responseRate: 90, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 87,
       popularity: 81,
@@ -59,7 +68,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/vangogh-sunflower-earrings.jpg"],
-      description: "Van Gogh Sunflower Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Van Gogh Sunflower Earrings · Excellent condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bleach-tank-top",
@@ -67,8 +76,11 @@
       brand: "Artisanal Threads",
       category: "clothing",
       subcategory: "Tops",
-      price: 2000,
-      originalPrice: 2820,
+      price: 600,
+      condition: "Fair",
+      listedDaysAgo: 23,
+      seller: { name: "Diya Menon", username: "diya.m", email: "diya.m@ashoka.edu.in", rating: 5, sales: 8, responseRate: 100, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.4,
       reviews: 52,
       popularity: 66,
@@ -77,7 +89,7 @@
       colors: ["White"],
       sizes: ["34","36","38"],
       images: ["images/aclothes/bleach-tank-top.jpg"],
-      description: "Bleach Design Tank Top · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Bleach Design Tank Top · Fair condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "comfort-cream-crop-tee",
@@ -85,7 +97,10 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Tops",
-      price: 2660,
+      price: 450,
+      condition: "Excellent",
+      listedDaysAgo: 20,
+      seller: { name: "Ishaan Verma", username: "ishaan.v", email: "ishaan.v@ashoka.edu.in", rating: 4.6, sales: 24, responseRate: 88, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 128,
@@ -95,7 +110,7 @@
       colors: ["Cream","Blue"],
       sizes: ["34","36","38","40"],
       images: ["images/aclothes/comfort-cream-crop-tee.jpg"],
-      description: "Block-Printed Cream Crop Tee · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Block-Printed Cream Crop Tee · Excellent condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "kolhapuri-sandals",
@@ -103,8 +118,11 @@
       brand: "Kolhapur Collective",
       category: "shoes",
       subcategory: "Sandals",
-      price: 3160,
-      originalPrice: 4320,
+      price: 750,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Kabir Shah", username: "kabir.s", email: "kabir.s@ashoka.edu.in", rating: 4.4, sales: 15, responseRate: 82, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.9,
       reviews: 302,
       popularity: 93,
@@ -113,7 +131,7 @@
       colors: ["Tan","Maroon"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9"],
       images: ["images/aclothes/kolhapuri-sandals.jpg"],
-      description: "Earthy Kolhapuri Sandals · handcrafted sandals, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Earthy Kolhapuri Sandals · Excellent condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "green-quilling-jhumka",
@@ -121,7 +139,10 @@
       brand: "Kala Kendra",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1500,
+      price: 600,
+      condition: "Like New",
+      listedDaysAgo: 19,
+      seller: { name: "Meera Nair", username: "meera.n", email: "meera.n@ashoka.edu.in", rating: 4.9, sales: 27, responseRate: 97, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 118,
@@ -131,7 +152,7 @@
       colors: ["Green"],
       sizes: ["One Size"],
       images: ["images/aclothes/green-quilling-jhumka.jpg"],
-      description: "Green Quilled Jhumka Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Green Quilled Jhumka Earrings · Like New condition · listed by Meera Nair (meera.n). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "guitar-bleach-tank",
@@ -139,7 +160,10 @@
       brand: "Artisanal Threads",
       category: "clothing",
       subcategory: "Tops",
-      price: 2160,
+      price: 300,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Nikhil Bose", username: "nikhil.b", email: "nikhil.b@ashoka.edu.in", rating: 4.3, sales: 6, responseRate: 78, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.3,
       reviews: 37,
@@ -149,7 +173,7 @@
       colors: ["Black"],
       sizes: ["34","36","38"],
       images: ["images/aclothes/guitar-bleach-tank.jpg"],
-      description: "Hand-Bleached Guitar Tank · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Hand-Bleached Guitar Tank · Excellent condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "dragonfly-arm-cuff",
@@ -157,7 +181,10 @@
       brand: "Kala Kendra",
       category: "jewellery",
       subcategory: "Cuffs",
-      price: 2400,
+      price: 400,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Aisha Khan", username: "aisha.k", email: "aisha.k@ashoka.edu.in", rating: 4.8, sales: 22, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 93,
@@ -167,7 +194,7 @@
       colors: ["Antique Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/dragonfly-arm-cuff.jpg"],
-      description: "Handmade Dragonfly Arm Cuff · handcrafted cuffs, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Handmade Dragonfly Arm Cuff · Excellent condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "handpainted-wide-jeans",
@@ -175,8 +202,11 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Jeans",
-      price: 4820,
-      originalPrice: 6300,
+      price: 850,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Rohit Desai", username: "rohit.d", email: "rohit.d@ashoka.edu.in", rating: 4.5, sales: 11, responseRate: 85, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.5,
       reviews: 49,
       popularity: 68,
@@ -185,7 +215,7 @@
       colors: ["Indigo"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/handpainted-wide-jeans.jpg"],
-      description: "Hand-Painted Wide Denim Jeans · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Hand-Painted Wide Denim Jeans · Like New condition · listed by Rohit Desai (rohit.d). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "moon-sun-jeans",
@@ -193,8 +223,11 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Jeans",
-      price: 5140,
-      originalPrice: 6980,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 21,
+      seller: { name: "Sanya Gupta", username: "sanya.g", email: "sanya.g@ashoka.edu.in", rating: 4.7, sales: 16, responseRate: 91, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 143,
       popularity: 91,
@@ -203,7 +236,7 @@
       colors: ["Washed Blue"],
       sizes: ["34","36","38","40"],
       images: ["images/aclothes/moon-sun-jeans.jpg"],
-      description: "Moon & Sun Painted Jeans · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Moon & Sun Painted Jeans · Excellent condition · listed by Sanya Gupta (sanya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "cherry-earrings",
@@ -211,7 +244,10 @@
       brand: "Kala Kendra",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1240,
+      price: 350,
+      condition: "Like New",
+      listedDaysAgo: 24,
+      seller: { name: "Vivaan Joshi", username: "vivaan.j", email: "vivaan.j@ashoka.edu.in", rating: 4.2, sales: 4, responseRate: 74, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 77,
@@ -221,7 +257,7 @@
       colors: ["Red"],
       sizes: ["One Size"],
       images: ["images/aclothes/cherry-earrings.jpg"],
-      description: "Quilled Cherry Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Quilled Cherry Earrings · Like New condition · listed by Vivaan Joshi (vivaan.j). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "spiral-pendant-necklace",
@@ -229,8 +265,11 @@
       brand: "Estrella",
       category: "jewellery",
       subcategory: "Necklaces",
-      price: 2820,
-      originalPrice: 3740,
+      price: 450,
+      condition: "Excellent",
+      listedDaysAgo: 26,
+      seller: { name: "Tara Pillai", username: "tara.p", email: "tara.p@ashoka.edu.in", rating: 4.9, sales: 35, responseRate: 99, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 88,
       popularity: 75,
@@ -239,7 +278,7 @@
       colors: ["Silver"],
       sizes: ["One Size"],
       images: ["images/aclothes/spiral-pendant-necklace.jpg"],
-      description: "Spiral Swirl Pendant Necklace · handcrafted necklaces, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Spiral Swirl Pendant Necklace · Excellent condition · listed by Tara Pillai (tara.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bohemian-linen-dress",
@@ -247,8 +286,11 @@
       brand: "Boho Threads",
       category: "clothing",
       subcategory: "Shirts",
-      price: 4820,
-      originalPrice: 6480,
+      price: 750,
+      condition: "Fair",
+      listedDaysAgo: 11,
+      seller: { name: "Arjun Reddy", username: "arjun.r", email: "arjun.r@ashoka.edu.in", rating: 4.6, sales: 18, responseRate: 87, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 176,
       popularity: 89,
@@ -257,7 +299,7 @@
       colors: ["Beige","Green"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/bohemian-linen-dress.jpg"],
-      description: "Bohemian Pure Linen Shirt · handcrafted shirts, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Bohemian Pure Linen Shirt · Fair condition · listed by Arjun Reddy (arjun.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "collectors-ceramic-vessel",
@@ -265,7 +307,10 @@
       brand: "Terracotta Tales",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 3660,
+      price: 400,
+      condition: "Like New",
+      listedDaysAgo: 25,
+      seller: { name: "Zoya Sheikh", username: "zoya.s", email: "zoya.s@ashoka.edu.in", rating: 4.8, sales: 13, responseRate: 94, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 61,
@@ -275,7 +320,7 @@
       colors: ["Terracotta","Cream"],
       sizes: ["One Size"],
       images: ["images/aclothes/collectors-ceramic-vessel.jpg"],
-      description: "Ceramic Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Ceramic Earrings · Like New condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "tiger-eye-shirt",
@@ -283,8 +328,11 @@
       brand: "Sirohi",
       category: "clothing",
       subcategory: "Shirts",
-      price: 3740,
-      originalPrice: 4820,
+      price: 650,
+      condition: "Excellent",
+      listedDaysAgo: 9,
+      seller: { name: "Dev Malhotra", username: "dev.m", email: "dev.m@ashoka.edu.in", rating: 4.4, sales: 9, responseRate: 80, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 94,
       popularity: 79,
@@ -293,7 +341,7 @@
       colors: ["Multicolour"],
       sizes: ["34","36","38"],
       images: ["images/aclothes/tiger-eye-shirt.jpg"],
-      description: "Tiger Eye Statement Shirt · handcrafted shirts, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Tiger Eye Statement Shirt · Excellent condition · listed by Dev Malhotra (dev.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "tiger-graphic-tee",
@@ -301,7 +349,10 @@
       brand: "Sirohi",
       category: "clothing",
       subcategory: "Tees",
-      price: 2320,
+      price: 900,
+      condition: "Excellent",
+      listedDaysAgo: 14,
+      seller: { name: "Kavya Rao", username: "kavya.r", email: "kavya.r@ashoka.edu.in", rating: 4.7, sales: 21, responseRate: 92, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 58,
@@ -311,7 +362,7 @@
       colors: ["Black"],
       sizes: ["34","36","38","40"],
       images: ["images/aclothes/tiger-graphic-tee.jpg"],
-      description: "Tiger Graphic Tee · handcrafted tees, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Tiger Graphic Tee · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bleach-streetwear-tee",
@@ -319,7 +370,10 @@
       brand: "Artisanal Threads",
       category: "clothing",
       subcategory: "Tops",
-      price: 3160,
+      price: 700,
+      condition: "Good",
+      listedDaysAgo: 10,
+      seller: { name: "Yash Patel", username: "yash.p", email: "yash.p@ashoka.edu.in", rating: 4.3, sales: 7, responseRate: 76, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.3,
       reviews: 41,
@@ -329,7 +383,7 @@
       colors: ["Black"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/bleach-streetwear-tee.jpg"],
-      description: "Trendy Bleach Crop Top · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Trendy Bleach Crop Top · Good condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "embroidered-slip-dress",
@@ -337,8 +391,11 @@
       brand: "Estrella",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1660,
-      originalPrice: 2320,
+      price: 150,
+      condition: "Excellent",
+      listedDaysAgo: 20,
+      seller: { name: "Mira Sen", username: "mira.s", email: "mira.s@ashoka.edu.in", rating: 4.9, sales: 29, responseRate: 96, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 66,
       popularity: 72,
@@ -347,7 +404,7 @@
       colors: ["Silver","Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/embroidered-slip-dress.jpg"],
-      description: "Wire Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Wire Earrings · Excellent condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "chanderi-co-ord",
@@ -355,8 +412,11 @@
       brand: "Charmpad Studio",
       category: "shoes",
       subcategory: "Sneakers",
-      price: 3740,
-      originalPrice: 4820,
+      price: 1150,
+      condition: "Like New",
+      listedDaysAgo: 12,
+      seller: { name: "Neel Bhatia", username: "neel.b", email: "neel.b@ashoka.edu.in", rating: 4.5, sales: 14, responseRate: 84, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 121,
       popularity: 84,
@@ -365,7 +425,7 @@
       colors: ["Black","Red"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
       images: ["images/aclothes/chanderi-co-ord.jpg"],
-      description: "Spiderman Sneakers · handcrafted sneakers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Spiderman Sneakers · Like New condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "handloom-silk-saree",
@@ -373,8 +433,11 @@
       brand: "Atelier Moti",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 2000,
-      originalPrice: 2820,
+      price: 250,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Ananya Gokhale", username: "ananya.g", email: "ananya.g@ashoka.edu.in", rating: 4.8, sales: 17, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 98,
       popularity: 87,
@@ -383,7 +446,7 @@
       colors: ["Terracotta","Cream"],
       sizes: ["One Size"],
       images: ["images/aclothes/handloom-silk-saree.jpg"],
-      description: "Clay Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Clay Earrings · Excellent condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "ankle-strap-flats",
@@ -391,7 +454,10 @@
       brand: "Charmpad Studio",
       category: "shoes",
       subcategory: "Boots",
-      price: 3820,
+      price: 550,
+      condition: "Excellent",
+      listedDaysAgo: 26,
+      seller: { name: "Riya Chatterjee", username: "riya.c", email: "riya.c@ashoka.edu.in", rating: 4.6, sales: 10, responseRate: 89, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 54,
@@ -401,7 +467,7 @@
       colors: ["Black","Gold"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/ankle-strap-flats.jpg"],
-      description: "Embroidered Ankle-Strap Boots · handcrafted boots, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Embroidered Ankle-Strap Boots · Excellent condition · listed by Riya Chatterjee (riya.c). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "indigo-block-print-dress",
@@ -409,8 +475,11 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Shirts",
-      price: 4320,
-      originalPrice: 5820,
+      price: 550,
+      condition: "Like New",
+      listedDaysAgo: 7,
+      seller: { name: "Aditi Rao", username: "aditi.r", email: "aditi.r@ashoka.edu.in", rating: 4.9, sales: 31, responseRate: 98, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 88,
       popularity: 76,
@@ -419,7 +488,7 @@
       colors: ["Indigo"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/indigo-block-print-dress.jpg"],
-      description: "Indigo Block-Print Shirt · handcrafted shirts, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Indigo Block-Print Shirt · Like New condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "satin-slip-dress",
@@ -427,7 +496,10 @@
       brand: "Estrella",
       category: "clothing",
       subcategory: "Tees",
-      price: 5320,
+      price: 450,
+      condition: "Fair",
+      listedDaysAgo: 5,
+      seller: { name: "Ananya Iyer", username: "ananya.i", email: "ananya.i@ashoka.edu.in", rating: 4.8, sales: 12, responseRate: 95, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 73,
@@ -437,7 +509,7 @@
       colors: ["Multicolour"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/satin-slip-dress.jpg"],
-      description: "Hand-Painted Dystopian T-Shirt · handcrafted tees, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Hand-Painted Dystopian T-Shirt · Fair condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "co-ord-lounge-set",
@@ -445,7 +517,10 @@
       brand: "IndiMade",
       category: "clothing",
       subcategory: "Shirts",
-      price: 3980,
+      price: 700,
+      condition: "Like New",
+      listedDaysAgo: 25,
+      seller: { name: "Rhea Kapoor", username: "rhea.k", email: "rhea.k@ashoka.edu.in", rating: 4.7, sales: 19, responseRate: 90, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 82,
@@ -455,7 +530,7 @@
       colors: ["Cream"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/co-ord-lounge-set.jpg"],
-      description: "Cotton Lounge Shirt · handcrafted shirts, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Cotton Lounge Shirt · Like New condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "printed-midi-skirt",
@@ -463,8 +538,11 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Jeans",
-      price: 3320,
-      originalPrice: 4480,
+      price: 450,
+      condition: "Fair",
+      listedDaysAgo: 5,
+      seller: { name: "Diya Menon", username: "diya.m", email: "diya.m@ashoka.edu.in", rating: 5, sales: 8, responseRate: 100, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.5,
       reviews: 47,
       popularity: 67,
@@ -473,7 +551,7 @@
       colors: ["Indigo"],
       sizes: ["26","28","30","32","34"],
       images: ["images/aclothes/printed-midi-skirt.jpg"],
-      description: "Block-Printed Jeans · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Block-Printed Jeans · Fair condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "chunky-bead-bracelet",
@@ -481,7 +559,10 @@
       brand: "Kala Kendra",
       category: "clothing",
       subcategory: "Jeans",
-      price: 1320,
+      price: 700,
+      condition: "Like New",
+      listedDaysAgo: 25,
+      seller: { name: "Ishaan Verma", username: "ishaan.v", email: "ishaan.v@ashoka.edu.in", rating: 4.6, sales: 24, responseRate: 88, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 39,
@@ -491,7 +572,7 @@
       colors: ["Blue"],
       sizes: ["26","28","30","32","34"],
       images: ["images/aclothes/chunky-bead-bracelet.jpg"],
-      description: "Sunflower-Pattern Denim Jeans · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Sunflower-Pattern Denim Jeans · Like New condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "knotted-silk-band",
@@ -499,7 +580,10 @@
       brand: "Swadeshi Wares",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1000,
+      price: 250,
+      condition: "Good",
+      listedDaysAgo: 22,
+      seller: { name: "Kabir Shah", username: "kabir.s", email: "kabir.s@ashoka.edu.in", rating: 4.4, sales: 15, responseRate: 82, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 72,
@@ -509,7 +593,7 @@
       colors: ["Antique Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/knotted-silk-band.jpg"],
-      description: "Dragonfly Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Dragonfly Earrings · Good condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "matte-hoop-earrings",
@@ -517,7 +601,10 @@
       brand: "Estrella",
       category: "shoes",
       subcategory: "Sneakers",
-      price: 1580,
+      price: 400,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Meera Nair", username: "meera.n", email: "meera.n@ashoka.edu.in", rating: 4.9, sales: 27, responseRate: 97, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 91,
@@ -527,7 +614,7 @@
       colors: ["White","Multicolour"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
       images: ["images/aclothes/matte-hoop-earrings.jpg"],
-      description: "Hand-Painted Sneakers · handcrafted sneakers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Hand-Painted Sneakers · Excellent condition · listed by Meera Nair (meera.n). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "beaded-flower-earrings",
@@ -535,7 +622,10 @@
       brand: "Kala Kendra",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1820,
+      price: 450,
+      condition: "Good",
+      listedDaysAgo: 16,
+      seller: { name: "Nikhil Bose", username: "nikhil.b", email: "nikhil.b@ashoka.edu.in", rating: 4.3, sales: 6, responseRate: 78, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 104,
@@ -545,7 +635,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/beaded-flower-earrings.jpg"],
-      description: "Beaded Flower Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Beaded Flower Earrings · Good condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "spiderman-custom-tee",
@@ -553,7 +643,10 @@
       brand: "Artisanal Threads",
       category: "clothing",
       subcategory: "Jeans",
-      price: 2240,
+      price: 450,
+      condition: "Fair",
+      listedDaysAgo: 5,
+      seller: { name: "Aisha Khan", username: "aisha.k", email: "aisha.k@ashoka.edu.in", rating: 4.8, sales: 22, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.2,
       reviews: 44,
@@ -563,7 +656,7 @@
       colors: ["Indigo"],
       sizes: ["26","28","30","32","34"],
       images: ["images/aclothes/spiderman-custom-tee.jpg"],
-      description: "Custom Spider Jeans · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Custom Spider Jeans · Fair condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "diy-painted-jorts",
@@ -571,7 +664,10 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Jeans",
-      price: 2820,
+      price: 750,
+      condition: "Excellent",
+      listedDaysAgo: 26,
+      seller: { name: "Rohit Desai", username: "rohit.d", email: "rohit.d@ashoka.edu.in", rating: 4.5, sales: 11, responseRate: 85, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 58,
@@ -581,7 +677,7 @@
       colors: ["Indigo"],
       sizes: ["34","36","38"],
       images: ["images/aclothes/diy-painted-jorts.jpg"],
-      description: "DIY Painted Denim Jorts · handcrafted jeans, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "DIY Painted Denim Jorts · Excellent condition · listed by Rohit Desai (rohit.d). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bafta-embroidered-top",
@@ -589,7 +685,10 @@
       brand: "IndiMade",
       category: "bags",
       subcategory: "Handbags",
-      price: 3240,
+      price: 550,
+      condition: "Good",
+      listedDaysAgo: 28,
+      seller: { name: "Sanya Gupta", username: "sanya.g", email: "sanya.g@ashoka.edu.in", rating: 4.7, sales: 16, responseRate: 91, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 37,
@@ -599,7 +698,7 @@
       colors: ["Black","Tan"],
       sizes: ["One Size"],
       images: ["images/aclothes/bafta-embroidered-top.jpg"],
-      description: "Dual-Color Handbag · handcrafted handbags, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Dual-Color Handbag · Good condition · listed by Sanya Gupta (sanya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "blue-satin-drape-tank",
@@ -607,8 +706,11 @@
       brand: "Estrella",
       category: "clothing",
       subcategory: "Tops",
-      price: 2740,
-      originalPrice: 3660,
+      price: 350,
+      condition: "Excellent",
+      listedDaysAgo: 3,
+      seller: { name: "Vivaan Joshi", username: "vivaan.j", email: "vivaan.j@ashoka.edu.in", rating: 4.2, sales: 4, responseRate: 74, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 69,
       popularity: 73,
@@ -617,7 +719,7 @@
       colors: ["Cobalt"],
       sizes: ["34","36","38"],
       images: ["images/aclothes/blue-satin-drape-tank.jpg"],
-      description: "Blue Satin Drape Tank · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Blue Satin Drape Tank · Excellent condition · listed by Vivaan Joshi (vivaan.j). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "classic-canvas-sneakers",
@@ -625,8 +727,11 @@
       brand: "Charmpad Studio",
       category: "shoes",
       subcategory: "Sneakers",
-      price: 3480,
-      originalPrice: 4640,
+      price: 1000,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Tara Pillai", username: "tara.p", email: "tara.p@ashoka.edu.in", rating: 4.9, sales: 35, responseRate: 99, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.5,
       reviews: 132,
       popularity: 81,
@@ -635,7 +740,7 @@
       colors: ["White","Black"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
       images: ["images/aclothes/classic-canvas-sneakers.jpg"],
-      description: "Classic Canvas Sneakers · handcrafted sneakers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Classic Canvas Sneakers · Excellent condition · listed by Tara Pillai (tara.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "beige-highwaist-trousers",
@@ -643,7 +748,10 @@
       brand: "Sirohi",
       category: "clothing",
       subcategory: "Trousers",
-      price: 3820,
+      price: 300,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Arjun Reddy", username: "arjun.r", email: "arjun.r@ashoka.edu.in", rating: 4.6, sales: 18, responseRate: 87, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 96,
@@ -653,7 +761,7 @@
       colors: ["Beige"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/beige-highwaist-trousers.jpg"],
-      description: "The Beige Fit High-Waist Trousers · handcrafted trousers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "The Beige Fit High-Waist Trousers · Excellent condition · listed by Arjun Reddy (arjun.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "striped-corset-maxi",
@@ -661,8 +769,11 @@
       brand: "Boho Threads",
       category: "clothing",
       subcategory: "Dresses",
-      price: 6560,
-      originalPrice: 8640,
+      price: 300,
+      condition: "Fair",
+      listedDaysAgo: 17,
+      seller: { name: "Zoya Sheikh", username: "zoya.s", email: "zoya.s@ashoka.edu.in", rating: 4.8, sales: 13, responseRate: 94, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 157,
       popularity: 90,
@@ -671,7 +782,7 @@
       colors: ["White","Black"],
       sizes: ["32","34","36","38"],
       images: ["images/aclothes/striped-corset-maxi.jpg"],
-      description: "Striped Halter Corset Maxi Dress · handcrafted dresses, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Striped Halter Corset Maxi Dress · Fair condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "embroidered-cushion-cover",
@@ -679,7 +790,10 @@
       brand: "Terracotta Tales",
       category: "clothing",
       subcategory: "Trousers",
-      price: 2160,
+      price: 550,
+      condition: "Like New",
+      listedDaysAgo: 7,
+      seller: { name: "Dev Malhotra", username: "dev.m", email: "dev.m@ashoka.edu.in", rating: 4.4, sales: 9, responseRate: 80, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 45,
@@ -689,7 +803,7 @@
       colors: ["Blue"],
       sizes: ["26","28","30","32","34"],
       images: ["images/aclothes/embroidered-cushion-cover.jpg"],
-      description: "Blue Formal Pants · handcrafted trousers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Blue Formal Pants · Like New condition · listed by Dev Malhotra (dev.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "canvas-weekender-tote",
@@ -697,7 +811,10 @@
       brand: "Swadeshi Wares",
       category: "clothing",
       subcategory: "Trousers",
-      price: 2660,
+      price: 800,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Kavya Rao", username: "kavya.r", email: "kavya.r@ashoka.edu.in", rating: 4.7, sales: 21, responseRate: 92, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 61,
@@ -707,7 +824,7 @@
       colors: ["Blue","Grey"],
       sizes: ["26","28","30","32","34"],
       images: ["images/aclothes/canvas-weekender-tote.jpg"],
-      description: "Formal Striped Pants · handcrafted trousers, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Formal Striped Pants · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "golden-jhumka-earrings",
@@ -715,7 +832,10 @@
       brand: "Atelier Moti",
       category: "clothing",
       subcategory: "Dresses",
-      price: 2320,
+      price: 300,
+      condition: "Fair",
+      listedDaysAgo: 17,
+      seller: { name: "Yash Patel", username: "yash.p", email: "yash.p@ashoka.edu.in", rating: 4.3, sales: 7, responseRate: 76, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 88,
@@ -725,7 +845,7 @@
       colors: ["Denim"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/golden-jhumka-earrings.jpg"],
-      description: "Classic Jean Dress · handcrafted dresses, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Classic Jean Dress · Fair condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "printed-chiffon-scarf",
@@ -733,7 +853,10 @@
       brand: "Sirohi",
       category: "clothing",
       subcategory: "Dresses",
-      price: 1500,
+      price: 900,
+      condition: "Fair",
+      listedDaysAgo: 29,
+      seller: { name: "Mira Sen", username: "mira.s", email: "mira.s@ashoka.edu.in", rating: 4.9, sales: 29, responseRate: 96, responseTime: "within an hour", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.3,
       reviews: 51,
@@ -743,7 +866,7 @@
       colors: ["Multicolour"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/printed-chiffon-scarf.jpg"],
-      description: "Printed Summer Dress · handcrafted dresses, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Printed Summer Dress · Fair condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "macrame-wall-hanging",
@@ -751,7 +874,10 @@
       brand: "Terracotta Tales",
       category: "clothing",
       subcategory: "Sets",
-      price: 2980,
+      price: 800,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Neel Bhatia", username: "neel.b", email: "neel.b@ashoka.edu.in", rating: 4.5, sales: 14, responseRate: 84, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.6,
       reviews: 34,
@@ -761,7 +887,7 @@
       colors: ["White"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/macrame-wall-hanging.jpg"],
-      description: "White Co-ord Set · handcrafted sets, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "White Co-ord Set · Excellent condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "terracotta-planter-pot",
@@ -769,7 +895,10 @@
       brand: "Terracotta Tales",
       category: "clothing",
       subcategory: "Tops",
-      price: 1740,
+      price: 450,
+      condition: "Fair",
+      listedDaysAgo: 5,
+      seller: { name: "Ananya Gokhale", username: "ananya.g", email: "ananya.g@ashoka.edu.in", rating: 4.8, sales: 17, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 57,
@@ -779,7 +908,7 @@
       colors: ["Brown"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/terracotta-planter-pot.jpg"],
-      description: "Brown Zara Top · handcrafted tops, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Brown Zara Top · Fair condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "paisley-cotton-duffel",
@@ -787,8 +916,11 @@
       brand: "Swadeshi Wares",
       category: "clothing",
       subcategory: "Sets",
-      price: 4480,
-      originalPrice: 5640,
+      price: 900,
+      condition: "Fair",
+      listedDaysAgo: 29,
+      seller: { name: "Riya Chatterjee", username: "riya.c", email: "riya.c@ashoka.edu.in", rating: 4.6, sales: 10, responseRate: 89, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 48,
       popularity: 61,
@@ -797,7 +929,7 @@
       colors: ["Denim"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/paisley-cotton-duffel.jpg"],
-      description: "Jean Co-ord Set · handcrafted sets, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Jean Co-ord Set · Fair condition · listed by Riya Chatterjee (riya.c). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "brass-leaf-brooch",
@@ -805,7 +937,10 @@
       brand: "Atelier Moti",
       category: "accessories",
       subcategory: "Ties",
-      price: 1420,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Aditi Rao", username: "aditi.r", email: "aditi.r@ashoka.edu.in", rating: 4.9, sales: 31, responseRate: 98, responseTime: "within an hour", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 42,
@@ -815,7 +950,7 @@
       colors: ["Denim"],
       sizes: ["One Size"],
       images: ["images/aclothes/brass-leaf-brooch.jpg"],
-      description: "Denim Designer Tie · handcrafted ties, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Denim Designer Tie · Excellent condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "handloom-table-runner",
@@ -823,7 +958,10 @@
       brand: "Terracotta Tales",
       category: "bags",
       subcategory: "Shoulder",
-      price: 2580,
+      price: 600,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Ananya Iyer", username: "ananya.i", email: "ananya.i@ashoka.edu.in", rating: 4.8, sales: 12, responseRate: 95, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 26,
@@ -833,7 +971,7 @@
       colors: ["Gold","Black"],
       sizes: ["One Size"],
       images: ["images/aclothes/handloom-table-runner.jpg"],
-      description: "Star Bag · handcrafted shoulder, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Star Bag · Like New condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "waxed-canvas-backpack",
@@ -841,7 +979,10 @@
       brand: "Swadeshi Wares",
       category: "shoes",
       subcategory: "Boots",
-      price: 4820,
+      price: 600,
+      condition: "Good",
+      listedDaysAgo: 22,
+      seller: { name: "Rhea Kapoor", username: "rhea.k", email: "rhea.k@ashoka.edu.in", rating: 4.7, sales: 19, responseRate: 90, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 74,
@@ -851,7 +992,7 @@
       colors: ["Silver","Black"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9"],
       images: ["images/aclothes/waxed-canvas-backpack.jpg"],
-      description: "Bedazzled Boots · handcrafted boots, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Bedazzled Boots · Good condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "ceramic-coaster-set",
@@ -859,7 +1000,10 @@
       brand: "Terracotta Tales",
       category: "shoes",
       subcategory: "Flats",
-      price: 1160,
+      price: 1100,
+      condition: "Excellent",
+      listedDaysAgo: 8,
+      seller: { name: "Diya Menon", username: "diya.m", email: "diya.m@ashoka.edu.in", rating: 5, sales: 8, responseRate: 100, responseTime: "within an hour", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.3,
       reviews: 33,
@@ -869,7 +1013,7 @@
       colors: ["Multicolour"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/ceramic-coaster-set.jpg"],
-      description: "Indian Print Shoes · handcrafted flats, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Indian Print Shoes · Excellent condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "canvas-travel-backpack",
@@ -877,8 +1021,11 @@
       brand: "Swadeshi Wares",
       category: "bags",
       subcategory: "Backpacks",
-      price: 3660,
-      originalPrice: 4820,
+      price: 400,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Ishaan Verma", username: "ishaan.v", email: "ishaan.v@ashoka.edu.in", rating: 4.6, sales: 24, responseRate: 88, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 58,
       popularity: 62,
@@ -887,7 +1034,7 @@
       colors: ["Olive","Tan"],
       sizes: ["One Size"],
       images: ["images/aclothes/canvas-travel-backpack.jpg"],
-      description: "Canvas Travel Backpack · handcrafted backpacks, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Canvas Travel Backpack · Like New condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "everyday-leather-tote",
@@ -895,8 +1042,11 @@
       brand: "Mirabeau",
       category: "bags",
       subcategory: "Backpacks",
-      price: 5640,
-      originalPrice: 7300,
+      price: 600,
+      condition: "Like New",
+      listedDaysAgo: 7,
+      seller: { name: "Kabir Shah", username: "kabir.s", email: "kabir.s@ashoka.edu.in", rating: 4.4, sales: 15, responseRate: 82, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 121,
       popularity: 74,
@@ -905,7 +1055,7 @@
       colors: ["Black","Tan"],
       sizes: ["One Size"],
       images: ["images/aclothes/everyday-leather-tote.jpg"],
-      description: "Everyday Backpack · handcrafted backpacks, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Everyday Backpack · Like New condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "cream-blush-wand",
@@ -913,7 +1063,10 @@
       brand: "Veridana",
       category: "beauty",
       subcategory: "Makeup",
-      price: 2160,
+      price: 500,
+      condition: "Fair",
+      listedDaysAgo: 11,
+      seller: { name: "Meera Nair", username: "meera.n", email: "meera.n@ashoka.edu.in", rating: 4.9, sales: 27, responseRate: 97, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 96,
@@ -923,7 +1076,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/cream-blush-wand.jpg"],
-      description: "Cream Blush Wand · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Cream Blush Wand · Fair condition · listed by Meera Nair (meera.n). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "burgundy-buckle-shoulder-bag",
@@ -931,8 +1084,11 @@
       brand: "Mirabeau",
       category: "bags",
       subcategory: "Shoulder",
-      price: 6140,
-      originalPrice: 7960,
+      price: 550,
+      condition: "Good",
+      listedDaysAgo: 22,
+      seller: { name: "Nikhil Bose", username: "nikhil.b", email: "nikhil.b@ashoka.edu.in", rating: 4.3, sales: 6, responseRate: 78, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 87,
       popularity: 78,
@@ -941,7 +1097,7 @@
       colors: ["Burgundy"],
       sizes: ["One Size"],
       images: ["images/aclothes/burgundy-buckle-shoulder-bag.jpg"],
-      description: "Burgundy Buckle Shoulder Bag · handcrafted shoulder, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Burgundy Buckle Shoulder Bag · Good condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "candle-warmer-lamp",
@@ -949,8 +1105,11 @@
       brand: "Terracotta Tales",
       category: "home",
       subcategory: "Objects",
-      price: 4320,
-      originalPrice: 5480,
+      price: 650,
+      condition: "Like New",
+      listedDaysAgo: 12,
+      seller: { name: "Aisha Khan", username: "aisha.k", email: "aisha.k@ashoka.edu.in", rating: 4.8, sales: 22, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 44,
       popularity: 63,
@@ -959,7 +1118,7 @@
       colors: ["Gold","Black"],
       sizes: ["One Size"],
       images: ["images/aclothes/candle-warmer-lamp.jpg"],
-      description: "Candle Warmer Lamp · handcrafted objects, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Candle Warmer Lamp · Like New condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "tealight-candle-holder-set",
@@ -967,7 +1126,10 @@
       brand: "Terracotta Tales",
       category: "home",
       subcategory: "Objects",
-      price: 2820,
+      price: 800,
+      condition: "Fair",
+      listedDaysAgo: 17,
+      seller: { name: "Rohit Desai", username: "rohit.d", email: "rohit.d@ashoka.edu.in", rating: 4.5, sales: 11, responseRate: 85, responseTime: "within a few hours", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 39,
@@ -977,7 +1139,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/tealight-candle-holder-set.jpg"],
-      description: "Pool Ball Tealight Holder Set · handcrafted objects, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Pool Ball Tealight Holder Set · Fair condition · listed by Rohit Desai (rohit.d). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "designer-leather-shoulder-bag",
@@ -985,8 +1147,11 @@
       brand: "Mirabeau",
       category: "bags",
       subcategory: "Shoulder",
-      price: 10620,
-      originalPrice: 13120,
+      price: 850,
+      condition: "Excellent",
+      listedDaysAgo: 14,
+      seller: { name: "Sanya Gupta", username: "sanya.g", email: "sanya.g@ashoka.edu.in", rating: 4.7, sales: 16, responseRate: 91, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 132,
       popularity: 82,
@@ -995,7 +1160,7 @@
       colors: ["Black"],
       sizes: ["One Size"],
       images: ["images/aclothes/designer-leather-shoulder-bag.jpg"],
-      description: "Designer Leather Shoulder Bag · handcrafted shoulder, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Designer Leather Shoulder Bag · Excellent condition · listed by Sanya Gupta (sanya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "new-nudes-palette",
@@ -1003,8 +1168,11 @@
       brand: "Veridana",
       category: "beauty",
       subcategory: "Makeup",
-      price: 3660,
-      originalPrice: 4640,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Vivaan Joshi", username: "vivaan.j", email: "vivaan.j@ashoka.edu.in", rating: 4.2, sales: 4, responseRate: 74, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 208,
       popularity: 76,
@@ -1013,7 +1181,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/new-nudes-palette.jpg"],
-      description: "Pro New Nudes Eye Palette · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Pro New Nudes Eye Palette · Excellent condition · listed by Vivaan Joshi (vivaan.j). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "wedding-eye-palette",
@@ -1021,8 +1189,11 @@
       brand: "Veridana",
       category: "beauty",
       subcategory: "Makeup",
-      price: 3160,
-      originalPrice: 4060,
+      price: 500,
+      condition: "Fair",
+      listedDaysAgo: 11,
+      seller: { name: "Tara Pillai", username: "tara.p", email: "tara.p@ashoka.edu.in", rating: 4.9, sales: 35, responseRate: 99, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 142,
       popularity: 64,
@@ -1031,7 +1202,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/wedding-eye-palette.jpg"],
-      description: "Wedding-Day Eye Palette · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Wedding-Day Eye Palette · Fair condition · listed by Tara Pillai (tara.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "handloom-midi-skirt",
@@ -1039,8 +1210,11 @@
       brand: "Sirohi",
       category: "bags",
       subcategory: "Handbags",
-      price: 2660,
-      originalPrice: 3480,
+      price: 700,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Arjun Reddy", username: "arjun.r", email: "arjun.r@ashoka.edu.in", rating: 4.6, sales: 18, responseRate: 87, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.5,
       reviews: 52,
       popularity: 58,
@@ -1049,7 +1223,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/handloom-midi-skirt.jpg"],
-      description: "Designer Indian-Print Bag · handcrafted handbags, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Designer Indian-Print Bag · Excellent condition · listed by Arjun Reddy (arjun.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bloom-print-kurta",
@@ -1057,8 +1231,11 @@
       brand: "Boho Threads",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 3480,
-      originalPrice: 4480,
+      price: 250,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Zoya Sheikh", username: "zoya.s", email: "zoya.s@ashoka.edu.in", rating: 4.8, sales: 13, responseRate: 94, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 74,
       popularity: 66,
@@ -1067,7 +1244,7 @@
       colors: ["Gold","Silver"],
       sizes: ["One Size"],
       images: ["images/aclothes/bloom-print-kurta.jpg"],
-      description: "Sun & Moon Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Sun & Moon Earrings · Excellent condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "printed-fleece-hoodie",
@@ -1075,8 +1252,11 @@
       brand: "Artisanal Threads",
       category: "jewellery",
       subcategory: "Necklaces",
-      price: 3240,
-      originalPrice: 4060,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 27,
+      seller: { name: "Dev Malhotra", username: "dev.m", email: "dev.m@ashoka.edu.in", rating: 4.4, sales: 9, responseRate: 80, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.4,
       reviews: 46,
       popularity: 47,
@@ -1085,7 +1265,7 @@
       colors: ["Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/printed-fleece-hoodie.jpg"],
-      description: "Celestial Bodies Necklace · handcrafted necklaces, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Celestial Bodies Necklace · Excellent condition · listed by Dev Malhotra (dev.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "bandhani-co-ord",
@@ -1093,8 +1273,11 @@
       brand: "Rangoli Studio",
       category: "clothing",
       subcategory: "Sets",
-      price: 4820,
-      originalPrice: 6300,
+      price: 200,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Kavya Rao", username: "kavya.r", email: "kavya.r@ashoka.edu.in", rating: 4.7, sales: 21, responseRate: 92, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 83,
       popularity: 72,
@@ -1103,7 +1286,7 @@
       colors: ["Red","Yellow"],
       sizes: ["34","36","38","40"],
       images: ["images/aclothes/bandhani-co-ord.jpg"],
-      description: "Bandhani Print Co-ord · handcrafted sets, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Bandhani Print Co-ord · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "leather-crossbody-mini",
@@ -1111,8 +1294,11 @@
       brand: "Mirabeau",
       category: "clothing",
       subcategory: "Skirts",
-      price: 4320,
-      originalPrice: 5480,
+      price: 350,
+      condition: "Excellent",
+      listedDaysAgo: 3,
+      seller: { name: "Yash Patel", username: "yash.p", email: "yash.p@ashoka.edu.in", rating: 4.3, sales: 7, responseRate: 76, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 61,
       popularity: 60,
@@ -1121,7 +1307,7 @@
       colors: ["Multicolour"],
       sizes: ["32","34","36","38","40"],
       images: ["images/aclothes/leather-crossbody-mini.jpg"],
-      description: "Indian Maxi Skirt · handcrafted skirts, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Indian Maxi Skirt · Excellent condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "oxidised-jhumka-set",
@@ -1129,8 +1315,11 @@
       brand: "Atelier Moti",
       category: "shoes",
       subcategory: "Heels",
-      price: 2400,
-      originalPrice: 3160,
+      price: 1000,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Mira Sen", username: "mira.s", email: "mira.s@ashoka.edu.in", rating: 4.9, sales: 29, responseRate: 96, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 92,
       popularity: 68,
@@ -1139,7 +1328,7 @@
       colors: ["Gold","Black"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/oxidised-jhumka-set.jpg"],
-      description: "Clockwork Heels · handcrafted heels, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Clockwork Heels · Excellent condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "block-print-cushion-duo",
@@ -1147,8 +1336,11 @@
       brand: "Terracotta Tales",
       category: "shoes",
       subcategory: "Heels",
-      price: 3820,
-      originalPrice: 4820,
+      price: 1000,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Neel Bhatia", username: "neel.b", email: "neel.b@ashoka.edu.in", rating: 4.5, sales: 14, responseRate: 84, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 37,
       popularity: 42,
@@ -1157,7 +1349,7 @@
       colors: ["Silver"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/block-print-cushion-duo.jpg"],
-      description: "Silver Mesh Heels · handcrafted heels, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Silver Mesh Heels · Like New condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "chiffon-dupatta",
@@ -1165,7 +1357,10 @@
       brand: "Sirohi",
       category: "shoes",
       subcategory: "Heels",
-      price: 2000,
+      price: 950,
+      condition: "Excellent",
+      listedDaysAgo: 2,
+      seller: { name: "Ananya Gokhale", username: "ananya.g", email: "ananya.g@ashoka.edu.in", rating: 4.8, sales: 17, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.4,
       reviews: 43,
@@ -1175,7 +1370,7 @@
       colors: ["Maroon"],
       sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
       images: ["images/aclothes/chiffon-dupatta.jpg"],
-      description: "Maroon Fish-Eye Leather Heels · handcrafted heels, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Maroon Fish-Eye Leather Heels · Excellent condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "embroidered-festive-flats",
@@ -1183,8 +1378,11 @@
       brand: "Charmpad Studio",
       category: "beauty",
       subcategory: "Makeup",
-      price: 3900,
-      originalPrice: 4980,
+      price: 200,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Riya Chatterjee", username: "riya.c", email: "riya.c@ashoka.edu.in", rating: 4.6, sales: 10, responseRate: 89, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 57,
       popularity: 61,
@@ -1193,7 +1391,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/embroidered-festive-flats.jpg"],
-      description: "Blush Liquid Tint · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Blush Liquid Tint · Like New condition · listed by Riya Chatterjee (riya.c). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "satin-quilted-pouch",
@@ -1201,7 +1399,10 @@
       brand: "Swadeshi Wares",
       category: "beauty",
       subcategory: "Makeup",
-      price: 2320,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 3,
+      seller: { name: "Aditi Rao", username: "aditi.r", email: "aditi.r@ashoka.edu.in", rating: 4.9, sales: 31, responseRate: 98, responseTime: "within an hour", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.5,
       reviews: 48,
@@ -1211,7 +1412,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/satin-quilted-pouch.jpg"],
-      description: "Eyeshadow Palette · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Eyeshadow Palette · Excellent condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "handpainted-boho-blouse",
@@ -1219,8 +1420,11 @@
       brand: "Rangoli Studio",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 2980,
-      originalPrice: 3820,
+      price: 300,
+      condition: "Excellent",
+      listedDaysAgo: 3,
+      seller: { name: "Ananya Iyer", username: "ananya.i", email: "ananya.i@ashoka.edu.in", rating: 4.8, sales: 12, responseRate: 95, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 63,
       popularity: 57,
@@ -1229,7 +1433,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/handpainted-boho-blouse.jpg"],
-      description: "Clay Hand-Painted Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Clay Hand-Painted Earrings · Excellent condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "mango-wood-decor",
@@ -1237,8 +1441,11 @@
       brand: "Terracotta Tales",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 2580,
-      originalPrice: 3320,
+      price: 300,
+      condition: "Like New",
+      listedDaysAgo: 13,
+      seller: { name: "Rhea Kapoor", username: "rhea.k", email: "rhea.k@ashoka.edu.in", rating: 4.7, sales: 19, responseRate: 90, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.4,
       reviews: 35,
       popularity: 39,
@@ -1247,7 +1454,7 @@
       colors: ["Pearl"],
       sizes: ["One Size"],
       images: ["images/aclothes/mango-wood-decor.jpg"],
-      description: "Tulip Pearl Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Tulip Pearl Earrings · Like New condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "silk-mix-stole",
@@ -1255,8 +1462,11 @@
       brand: "Boho Threads",
       category: "home",
       subcategory: "Scent",
-      price: 2160,
-      originalPrice: 2820,
+      price: 750,
+      condition: "Fair",
+      listedDaysAgo: 5,
+      seller: { name: "Diya Menon", username: "diya.m", email: "diya.m@ashoka.edu.in", rating: 5, sales: 8, responseRate: 100, responseTime: "within an hour", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.5,
       reviews: 56,
       popularity: 49,
@@ -1265,7 +1475,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/silk-mix-stole.jpg"],
-      description: "Ocean-Scented Candles · handcrafted scent, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Ocean-Scented Candles · Fair condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "slouchy-leather-handbag",
@@ -1273,8 +1483,11 @@
       brand: "Mirabeau",
       category: "bags",
       subcategory: "Handbags",
-      price: 5140,
-      originalPrice: 6640,
+      price: 550,
+      condition: "Like New",
+      listedDaysAgo: 18,
+      seller: { name: "Ishaan Verma", username: "ishaan.v", email: "ishaan.v@ashoka.edu.in", rating: 4.6, sales: 24, responseRate: 88, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 66,
       popularity: 59,
@@ -1283,7 +1496,7 @@
       colors: ["Denim"],
       sizes: ["One Size"],
       images: ["images/aclothes/slouchy-leather-handbag.jpg"],
-      description: "Slouchy Denim Handbag · handcrafted handbags, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Slouchy Denim Handbag · Like New condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "polymer-clay-earrings",
@@ -1291,7 +1504,10 @@
       brand: "Kala Kendra",
       category: "jewellery",
       subcategory: "Earrings",
-      price: 1740,
+      price: 600,
+      condition: "Fair",
+      listedDaysAgo: 29,
+      seller: { name: "Kabir Shah", username: "kabir.s", email: "kabir.s@ashoka.edu.in", rating: 4.4, sales: 15, responseRate: 82, responseTime: "within a day", university: 'Ashoka University' },
       originalPrice: null,
       rating: 4.7,
       reviews: 89,
@@ -1301,7 +1517,7 @@
       colors: ["Multicolour"],
       sizes: ["One Size"],
       images: ["images/aclothes/polymer-clay-earrings.jpg"],
-      description: "Polymer Clay Earrings · handcrafted earrings, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Polymer Clay Earrings · Fair condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "jules-blazer",
@@ -1309,8 +1525,11 @@
       brand: "Estrella",
       category: "beauty",
       subcategory: "Makeup",
-      price: 7300,
-      originalPrice: 9140,
+      price: 500,
+      condition: "Excellent",
+      listedDaysAgo: 3,
+      seller: { name: "Meera Nair", username: "meera.n", email: "meera.n@ashoka.edu.in", rating: 4.9, sales: 27, responseRate: 97, responseTime: "within a few hours", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.7,
       reviews: 54,
       popularity: 55,
@@ -1319,7 +1538,7 @@
       colors: [],
       sizes: ["One Size"],
       images: ["images/aclothes/jules-blazer.jpg"],
-      description: "YSL Lipstick · handcrafted makeup, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "YSL Lipstick · Excellent condition · listed by Meera Nair (meera.n). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "lorelai-co-ord",
@@ -1327,8 +1546,11 @@
       brand: "Boho Threads",
       category: "accessories",
       subcategory: "Phone",
-      price: 4480,
-      originalPrice: 5820,
+      price: 150,
+      condition: "Excellent",
+      listedDaysAgo: 8,
+      seller: { name: "Nikhil Bose", username: "nikhil.b", email: "nikhil.b@ashoka.edu.in", rating: 4.3, sales: 6, responseRate: 78, responseTime: "within a day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.6,
       reviews: 61,
       popularity: 52,
@@ -1337,7 +1559,7 @@
       colors: ["Gold","Silver"],
       sizes: ["One Size"],
       images: ["images/aclothes/lorelai-co-ord.jpg"],
-      description: "Vintage Phone Ring · handcrafted phone, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Vintage Phone Ring · Excellent condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
     {
       id: "vintage-lily-lamp",
@@ -1345,8 +1567,11 @@
       brand: "Terracotta Tales",
       category: "home",
       subcategory: "Lighting",
-      price: 5480,
-      originalPrice: 6980,
+      price: 450,
+      condition: "Excellent",
+      listedDaysAgo: 15,
+      seller: { name: "Aisha Khan", username: "aisha.k", email: "aisha.k@ashoka.edu.in", rating: 4.8, sales: 22, responseRate: 93, responseTime: "same day", university: 'Ashoka University' },
+      originalPrice: null,
       rating: 4.8,
       reviews: 71,
       popularity: 67,
@@ -1355,18 +1580,19 @@
       colors: ["Gold","Cream"],
       sizes: ["One Size"],
       images: ["images/aclothes/vintage-lily-lamp.jpg"],
-      description: "Vintage Lily Table Lamp · handcrafted lighting, chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone."
+      description: "Vintage Lily Table Lamp · Excellent condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     }
   ];
 
   const CATEGORY_META = {
-    clothing:     { name: 'Clothing',     icon: 'dress', tagline: 'Wearable blooms', weight: 1 },
-    shoes:        { name: 'Shoes',        icon: 'shoe', tagline: 'Well-heeled garden walks', weight: 2 },
-    bags:         { name: 'Bags',         icon: 'bag', tagline: 'Carry the season', weight: 3 },
-    jewellery:    { name: 'Jewellery',    icon: 'ring', tagline: 'Botanical gold', weight: 4 },
-    beauty:       { name: 'Beauty',       icon: 'flower', tagline: 'Petals for skin', weight: 5 },
-    home:         { name: 'Home',         icon: 'home', tagline: 'Grow a softer home', weight: 6 },
-    accessories:  { name: 'Accessories',  icon: 'glasses', tagline: 'Finishing touches', weight: 7 }
+    clothing:    { name: 'Clothing',          icon: 'dress',   tagline: 'The student closet', weight: 1 },
+    shoes:       { name: 'Footwear',          icon: 'shoe',    tagline: 'Sneakers, heels & more', weight: 2 },
+    bags:        { name: 'Bags',              icon: 'bag',     tagline: 'Carry it on', weight: 3 },
+    jewellery:   { name: 'Jewellery',         icon: 'ring',    tagline: 'Little treasures', weight: 4 },
+    beauty:      { name: 'Beauty',            icon: 'flower',  tagline: 'Self-care shelf', weight: 5 },
+    accessories: { name: 'Accessories',       icon: 'glasses', tagline: 'Finishing touches', weight: 6 },
+    home:        { name: 'Dorm & Decor',      icon: 'home',    tagline: 'For your room', weight: 7 },
+    books:       { name: 'Books & Academics', icon: 'book',    tagline: 'Study essentials', weight: 8 }
   };
 
   /* materialise the discount field (per requirement) */

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="apple-touch-icon" href="favicon.svg">
+<title>Track an order · Bloom</title>
+<meta name="description" content="Track a Bloom campus order and its on-campus handoff status.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css?v=20260916z">
+<link rel="stylesheet" href="css/responsive.css?v=20260916z">
+</head>
+<body data-page="help">
+
+<div id="app-header"></div>
+
+<main>
+  <div class="container">
+    <nav class="breadcrumbs" aria-label="Breadcrumb">
+      <a href="index.html">Home</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span>
+      <a href="info.html">Help &amp; info</a><span class="sep" data-icon="flower" data-icon-class="i-xs"></span>
+      <span class="crumb-current">Track an order</span>
+    </nav>
+  </div>
+
+  <section class="page-hero">
+    <span class="deco-leaf-tl" data-icon="sprig"></span>
+    <span class="deco-leaf-c" style="right:3%;bottom:6%" data-icon="leaf"></span>
+    <div class="container">
+      <p class="eyebrow">help centre</p>
+      <h1>Track an order</h1>
+      <p>See where your campus handoff is up to.</p>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="info-layout">
+        <aside class="info-toc" aria-label="Help pages">
+          <a href="info.html">Help &amp; info</a>
+          <a href="delivery.html">Delivery &amp; returns</a>
+          <a href="track.html" class="on">Track an order</a>
+          <a href="size-guide.html">Size guide</a>
+          <a href="care.html">Care guide</a>
+          <a href="contact.html">Contact us</a>
+        </aside>
+
+        <div class="info-content">
+          <article class="info-section">
+            <span class="info-ico" data-icon="orders" data-icon-class="i-sm"></span>
+            <h2>Enter your order number</h2>
+            <p>You will find it in your order confirmation, and in <a href="account.html?tab=orders">My orders</a>.</p>
+            <form class="track-form" id="track-form">
+              <input type="text" id="track-input" placeholder="e.g. BLM12345678" aria-label="Order number">
+              <button class="btn btn-primary" type="submit">Track order</button>
+            </form>
+            <div class="track-result" id="track-result"></div>
+          </article>
+
+          <article class="info-section">
+            <span class="info-ico" data-icon="check" data-icon-class="i-sm"></span>
+            <h2>What the statuses mean</h2>
+            <ul class="info-list">
+              <li><b>Confirmed</b> · payment is held and the seller has been notified.</li>
+              <li><b>Handoff arranged</b> · you and the seller have picked a time and place.</li>
+              <li><b>Completed</b> · you have met and confirmed the item · payment released.</li>
+            </ul>
+          </article>
+
+          <article class="info-section">
+            <span class="info-ico" data-icon="send" data-icon-class="i-sm"></span>
+            <h2>No update yet?</h2>
+            <p>Sellers usually reply within a few hours during term time. If it has been more than a day, message them or reach us.</p>
+            <a class="btn btn-outline" href="contact.html">Contact us <span class="btn-ic" data-icon="arrow" data-icon-class="i-sm"></span></a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="divider-flourish"><span data-icon="sprig" data-icon-class="i-sm"></span><span data-icon="flower" data-icon-class="i-sm"></span><span data-icon="sprig" data-icon-class="i-sm"></span></div>
+</main>
+
+<div id="app-footer"></div>
+
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script>
+  (function () {
+    var form = document.getElementById('track-form');
+    if (!form) return;
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var val = document.getElementById('track-input').value.trim().toUpperCase();
+      var out = document.getElementById('track-result');
+      var orders = [];
+      try { orders = JSON.parse(localStorage.getItem('bloom_orders_v1') || '[]'); } catch (x) { orders = []; }
+      if (!val) { out.className = 'track-result err'; out.textContent = 'Enter an order number first.'; return; }
+      var o = orders.filter(function (x) { return x.number.toUpperCase() === val; })[0];
+      if (!o) { out.className = 'track-result err'; out.textContent = 'No order found for ' + val + '. Check your confirmation email.'; return; }
+      out.className = 'track-result';
+      out.innerHTML = '<b>Order ' + o.number + '</b>' +
+        '<span>' + (o.items || []).length + ' item(s) · ' + window.App.money(o.total) + '</span>' +
+        '<span>Status: ' + (o.status || 'Confirmed') + ' · campus handoff ' + (o.eta || 'this week') + '</span>' +
+        '<span>Coordinate with the seller on campus to complete the pickup.</span>';
+    });
+  })();
+</script>
+<script>App.boot()</script>
+</body>
+</html>

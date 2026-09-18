@@ -48,6 +48,7 @@
   h2 { font-size: clamp(1.5rem, 5vw, 2rem); }
 
   .nav-links, .mega { display: none; }
+  .nav-inner { display: flex; justify-content: space-between; }
   .nav-action.nav-mobile-toggle { display: inline-flex; }
   .sticky .nav-search { inset: calc(100% + 12px) 16px auto auto; width: calc(100% - 32px); }
 
@@ -135,9 +136,9 @@
   .logo { font-size: 1.32rem; }
   .nav-left { gap: 10px; }
   .uni-btn { height: 34px; padding: 0 9px; font-size: .8rem; gap: 6px; }
-  .uni-name { display: inline-block; max-width: 74px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .uni-name { display: inline-block; max-width: 58px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .uni-chev svg { width: 11px; height: 11px; }
-  .nav-action { width: 34px; height: 34px; }
+  .nav-action { width: 32px; height: 32px; }
   .nav-action .nav-emoji svg { width: 17px; height: 17px; }
   .nav-actions { gap: 2px; }
   .nav-actions .dropdown { display: none; }
@@ -146,4 +147,36 @@
   .listing-row .listing-status { grid-column: 2; justify-self: start; }
   .listing-row .listing-actions { grid-column: 2; justify-content: flex-start; }
   .success-actions .btn { width: 100%; }
+}
+@media (max-width: 900px) {
+  .split-sections { grid-template-columns: 1fr; gap: 30px; }
+}
+/* keep the nav tidy on small laptops / tablets */
+@media (max-width: 1240px) and (min-width: 769px) {
+  .nav-links { gap: 16px; }
+  .nav-link { font-size: .95rem; }
+  .uni-name { display: inline-block; max-width: 104px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+}
+/* tablets / small laptops: collapse the nav to the menu a little sooner */
+@media (max-width: 1240px) and (min-width: 769px) {
+  .nav-inner { display: flex; justify-content: space-between; }
+  .nav-links, .mega { display: none; }
+  .nav-action.nav-mobile-toggle { display: inline-flex; }
+  .nav-actions .sell-link { display: none; }
+}
+@media (max-width: 768px) {
+  .nav-actions .sell-link { display: none; }
+}
+/* keep hero copy clear of the ornaments on narrow screens */
+@media (max-width: 768px) {
+  .sell-hero .deco-leaf-tl, .sell-hero .deco-flower { display: none; }
+}
+@media (max-width: 1024px) {
+  .info-layout { grid-template-columns: 1fr; gap: 26px; }
+  .info-toc { position: static; flex-direction: row; flex-wrap: wrap; }
+  .info-toc a { flex: 0 0 auto; }
+}
+@media (max-width: 520px) {
+  .info-section { padding: 22px 20px; }
+  .track-form .btn { width: 100%; }
 }

@@ -53,6 +53,8 @@
     home:    '<path d="M4 11 L12 4 L20 11"/><path d="M6.5 9.5 V20 H17.5 V9.5"/><path d="M10 20 V14.5 H14 V20"/>',
     glasses: '<circle cx="8" cy="14" r="3.4"/><circle cx="16" cy="14" r="3.4"/><path d="M11.4 14 H12.6"/><path d="M4.6 14 L6.2 8.5 H17.8 L19.4 14"/>',
     pants:   '<path d="M6 3 H18 L17.2 21 H13.2 L12 11.5 L10.8 21 H6.8 Z"/><path d="M12 6.5 H12"/>',
+    book:    '<path d="M12 6.5 C 10 4.8 7.5 4.5 4.5 5 V18 C 7.5 17.5 10 17.8 12 19.5 C 14 17.8 16.5 17.5 19.5 18 V5 C 16.5 4.5 14 4.8 12 6.5 Z"/><path d="M12 6.5 V19.5"/>',
+    upload:  '<path d="M12 16 V4.5"/><path d="M7 9.5 L12 4.5 L17 9.5"/><path d="M5 15 V18 a2 2 0 0 0 2 2 H17 a2 2 0 0 0 2 -2 V15"/>',
     edit:    '<path d="M4 20 L8.5 19 L19 8.5 L15.5 5 L5 15.5 Z"/><path d="M14 6.5 L17.5 10"/>'
   };
 
@@ -164,54 +166,52 @@
     if (v) { v.classList.remove('open'); setTimeout(() => v.remove(), 220); }
   };
 
-  /* ===================== Card renderer ===================== */
-  const badgeRow = (p) => {
-    const h = [];
-    if (p.discount > 0) h.push(`<span class="badge badge-sale">−${p.discount}%</span>`);
-    if (p.discount <= 0 && p.isNew) h.push(`<span class="badge badge-new">New</span>`);
-    return h.join('');
+  /* ===================== Card renderer (resale listing) ===================== */
+  function condClass(c) { return 'cond-' + String(c || '').toLowerCase().replace(/\s+/g, '-'); }
+
+  App.conditionChip = function (p) {
+    if (!p.condition) return '';
+    return `<span class="cond-chip ${condClass(p.condition)}">${App.esc(p.condition)}</span>`;
   };
 
-  const priceBlock = (p) => {
-    let out = `<span class="price-now">${App.money(p.price)}</span>`;
-    if (p.originalPrice) out += `<span class="price-was">${App.money(p.originalPrice)}</span>`;
-    if (p.discount) out += `<span class="price-disc">${p.discount}% off</span>`;
-    return out;
+  App.sellerLine = function (p) {
+    const s = p.seller;
+    if (!s) return '';
+    return `<div class="seller-line">${wrap('user', 'i-xs')}<span class="seller-name">${App.esc(s.name)}</span><span class="seller-rate">${wrap('star', 'i-xs')} ${s.rating}</span></div>`;
   };
 
   App.renderCard = function (p, opts) {
     opts = opts || {};
     const wishClass = window.Wishlist && Wishlist.has(p.id) ? ' liked' : '';
-    const heart = `<button class="wish-heart${wishClass}" data-wid="${p.id}" aria-label="Add to wishlist" title="Add to wishlist">${wrap('heart', 'wish-ico')}</button>`;
+    const heart = `<button class="wish-heart${wishClass}" data-wid="${p.id}" aria-label="Save listing" title="Save listing">${wrap('heart', 'wish-ico')}</button>`;
+    const badges = `${App.conditionChip(p)}${p.listedDaysAgo != null && p.listedDaysAgo <= 2 ? '<span class="badge badge-new">Just listed</span>' : ''}`;
     const actions = (opts.list ? `
       <div class="list-body-row">
         <button class="btn btn-primary btn-sm" data-add="${p.id}">Add to Cart</button>
         <button class="btn btn-outline btn-sm" data-buy="${p.id}">Buy Now</button>
-        <button class="btn btn-ghost btn-sm wish-inline" data-wid="${p.id}">${wrap('heart', 'wish-ico')} Wishlist</button>
+        <button class="btn btn-ghost btn-sm wish-inline" data-wid="${p.id}">${wrap('heart', 'wish-ico')} Save</button>
       </div>` : `
       <div class="card-actions">
         <button class="btn btn-ghost btn-sm" data-buy="${p.id}">Buy Now</button>
-        <button class="card-actions-add" data-add="${p.id}" aria-label="Add to cart" title="Add to cart">Add to bag ${wrap('bag')}</button>
+        <button class="card-actions-add" data-add="${p.id}" aria-label="Add to cart" title="Add to cart">Add to Cart ${wrap('bag')}</button>
       </div>`);
     const name = `<a class="name" href="product.html?id=${p.id}">${App.esc(p.name)}</a>`;
-    const br = App.brandRating(p.brand);
-    const brandLine = `<div class="brand-line"><span class="brand">${App.esc(p.brand)}</span>${br ? `<span class="brand-rate">${wrap('star','i-xs')} ${br.rating}</span>` : ''}</div>`;
+    const cat = window.CATEGORY_META[p.category] ? window.CATEGORY_META[p.category].name : p.category;
     return `
-    <article class="product-card${opts.list ? ' list-row-card' : ''}" data-pid="${p.id}">
+    <article class="product-card listing-card${opts.list ? ' list-row-card' : ''}" data-pid="${p.id}">
       <div class="card-inner">
         <a class="thumb" href="product.html?id=${p.id}" aria-label="${App.esc(p.name)}">
           ${maxValid(p)[0] ? `<img src="${maxValid(p)[0]}" alt="${App.esc(p.name)}" loading="lazy">` : ''}
         </a>
-        <div class="card-badges">${badgeRow(p)}</div>
+        <div class="card-badges">${badges}</div>
         ${heart}
         ${actions}
       </div>
       <div class="card-body">
-        <div class="cat">${App.esc(CATEGORY_META[p.category] ? CATEGORY_META[p.category].name : p.category)} · ${App.esc(p.subcategory || '')}</div>
+        <div class="cat">${App.esc(cat)}</div>
         ${name}
-        ${brandLine}
-        <div class="card-price">${priceBlock(p)}</div>
-        <div class="card-rating">${App.stars(p.rating)} <span class="stars-num">${p.rating}</span><span class="review-num" style="color:var(--muted);font-size:.8rem">(${p.reviews.toLocaleString()})</span></div>
+        <div class="card-price"><span class="price-now">${App.money(p.price)}</span></div>
+        ${App.sellerLine(p)}
       </div>
     </article>`;
   };
@@ -372,16 +372,17 @@
     if (!headerEl && !footerEl) return;
 
     const avail = window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS;
-    const catLinks = Object.keys(window.CATEGORY_META).map(k => ({ t: window.CATEGORY_META[k].name, l: 'shop.html?category=' + k }));
-    const wantedSubs = ['Tops', 'Shirts', 'Dresses', 'Kurtas', 'Jeans', 'Trousers', 'Skirts', 'Sets', 'Earrings', 'Necklaces', 'Heels', 'Boots', 'Sneakers', 'Flats', 'Handbags', 'Backpacks'];
+    const catPresent = new Set(avail.map(p => p.category));
+    const catLinks = Object.keys(window.CATEGORY_META).filter(k => catPresent.has(k)).map(k => ({ t: window.CATEGORY_META[k].name, l: 'shop.html?category=' + k }));
+    const wantedSubs = ['Tops', 'Shirts', 'Dresses', 'Jeans', 'Trousers', 'Skirts', 'Sets', 'Earrings', 'Necklaces', 'Heels', 'Boots', 'Sneakers', 'Flats', 'Handbags', 'Backpacks', 'Textbooks'];
     const subSet = new Set(avail.map(p => p.subcategory));
     const subLinks = wantedSubs.filter(x => subSet.has(x)).map(x => ({ t: x, l: 'shop.html?sub=' + encodeURIComponent(x) }));
     const editLinks = [
-      { t: 'New Arrivals', l: 'shop.html?new=1' },
-      { t: 'On Sale', l: 'shop.html?disc=1' },
-      { t: 'Bottoms', l: 'shop.html?bottoms=1' },
-      { t: 'Under ₹2,000', l: 'shop.html?max=2000' },
-      { t: 'Top Rated', l: 'shop.html?sort=rating' }
+      { t: 'Fresh on Campus', l: 'shop.html?sort=recent' },
+      { t: 'Under ₹500', l: 'shop.html?max=500' },
+      { t: 'Dorm Finds', l: 'shop.html?category=home' },
+      { t: 'Books & Academics', l: 'shop.html?category=books' },
+      { t: 'Top Seller Rating', l: 'shop.html?sort=seller' }
     ];
 
     const megaCol = (hed, links) => `
@@ -390,10 +391,10 @@
         ${links.map(c => `<a href="${c.l}">${c.t}</a>`).join('')}
       </div>`;
 
-    const megaHtml = megaCol('Categories', catLinks) + megaCol('Shop by style', subLinks) + megaCol('Edits', editLinks);
+    const megaHtml = megaCol('Categories', catLinks) + megaCol('Shop by style', subLinks) + megaCol('Student finds', editLinks);
     const header = `
     <div class="announce" role="status">
-      <span>Spring edit is here · free delivery on orders over ₹4,999 &amp; 10% off with code <b>FLEUR10</b></span>
+      <span>Buy, sell &amp; discover things from students on your campus · now live at <b>Ashoka University</b></span>
       <button class="close-announce" aria-label="Dismiss" data-icon="close" data-icon-class="i-sm"></button>
     </div>
     <header class="sticky">
@@ -416,16 +417,15 @@
           </div>
         </div>
         <ul class="nav-links">
+          <li><a class="nav-link${isActive('home') ? ' active' : ''}" href="index.html">Home</a></li>
           <li><a class="nav-link${isActive('shop') || PAGE === 'product' ? ' active' : ''}" href="shop.html">Shop</a></li>
           <li>
             <button class="nav-link link-drop" type="button" aria-haspopup="true">Categories ${wrap('chev', 'nav-badge-chev')}</button>
             <div class="mega"><div class="mega-grid">${megaHtml}</div></div>
           </li>
-          <li><a class="nav-link" href="shop.html?sort=newest&new=1">New Arrivals</a></li>
-          <li><a class="nav-link" href="shop.html?disc=1">Sale</a></li>
-          <li><a class="nav-link sell-link" href="sell.html">Sell on Bloom <span class="seller-badge" data-seller-badge style="display:none">0</span></a></li>
         </ul>
         <div class="nav-actions">
+          <a class="sell-link" href="sell.html"><span class="sell-ico" data-icon="plus" data-icon-class="i-xs"></span> Sell on Bloom <span class="seller-badge" data-seller-badge style="display:none">0</span></a>
           <button class="nav-action" type="button" data-nav-search aria-label="Search"><span class="nav-emoji" data-icon="search"></span></button>
           <div class="dropdown">
             <button class="nav-action" type="button" aria-label="Account" data-account><span class="nav-emoji" data-icon="user"></span></button>
@@ -444,7 +444,7 @@
         </div>
       </nav>
       <div class="nav-search" role="search">
-        <input type="text" placeholder="Search the shop · try “linen” or “necklace”" aria-label="Search products">
+        <input type="text" placeholder="Search listings · try “jeans” or “textbook”" aria-label="Search products">
         <div class="search-results"></div>
       </div>
     </header>
@@ -464,9 +464,10 @@
             <a href="shop.html?category=home">Home</a>
             <a href="shop.html?category=accessories">Accessories</a>
           </div>
-          <a href="shop.html?sort=newest&new=1">New Arrivals</a>
-          <a href="shop.html?disc=1">Sale</a>
-          <a href="sell.html">Sell on Bloom</a>
+          <a href="shop.html?sort=recent">Fresh on Campus</a>
+          <a href="shop.html?max=500">Under ₹500</a>
+          <a href="shop.html?category=books">Books &amp; Academics</a>
+          <a href="sell.html" class="sheet-sell"><span class="sell-ico" data-icon="plus" data-icon-class="i-xs"></span> Sell on Bloom</a>
           <a href="account.html">Account</a>
           <a href="wishlist.html">Wishlist</a>
           <a href="cart.html">Cart</a>
@@ -490,39 +491,38 @@
       <div class="container footer-grid">
         <div>
           <a class="logo" href="index.html"><span class="logo-mark" data-icon="flower"></span>Bloom</a>
-          <p style="margin-top:14px">An independent marketplace for thoughtfully made fashion &amp; home things. Grown slowly, delivered quickly.</p>
+          <p style="margin-top:14px">A student-to-student resale marketplace. Buy, sell and discover pre-owned things from students on your campus, with on-campus pickup.</p>
           <div class="socials">
-            <a href="#" aria-label="Instagram">${wrap('heart')}</a>
-            <a href="#" aria-label="Pinterest">${wrap('leaf')}</a>
-            <a href="#" aria-label="TikTok">${wrap('eye')}</a>
+            <a href="contact.html" aria-label="Instagram">${wrap('heart')}</a>
+            <a href="contact.html" aria-label="Pinterest">${wrap('leaf')}</a>
+            <a href="contact.html" aria-label="TikTok">${wrap('eye')}</a>
           </div>
         </div>
         <div>
           <h4>Shop</h4>
           ${Object.keys(window.CATEGORY_META).map(k => `<a href="shop.html?category=${k}">${window.CATEGORY_META[k].name}</a>`).join('')}
-          <a href="shop.html?disc=1">Sale</a>
-        </div>
+          </div>
         <div>
           <h4>Help</h4>
-          <a href="#">Delivery &amp; returns</a>
-          <a href="#">Track an order</a>
-          <a href="#">Size guide</a>
-          <a href="#">Care guide</a>
-          <a href="#">Contact us</a>
+          <a href="delivery.html">Delivery &amp; returns</a>
+          <a href="track.html">Track an order</a>
+          <a href="size-guide.html">Size guide</a>
+          <a href="care.html">Care guide</a>
+          <a href="contact.html">Contact us</a>
         </div>
         <div>
           <h4>Company</h4>
-          <a href="#">Our story</a>
-          <a href="#">Sustainability</a>
-          <a href="#">Careers</a>
+          <a href="info.html#story">Our story</a>
+          <a href="info.html#sustainability">Sustainability</a>
+          <a href="info.html#careers">Careers</a>
           <a href="sell.html">Sell on Bloom</a>
-          <a href="#">Press</a>
-          <a href="#">Privacy &amp; terms</a>
+          <a href="info.html#press">Press</a>
+          <a href="info.html#privacy">Privacy &amp; terms</a>
         </div>
       </div>
       <div class="container foot-bottom">
         <span>© 2026 Bloom Marketplace · made with care and plenty of petal</span>
-        <span class="pay-notes">${wrap('check')} SSL secure · ${wrap('truck')} Tracked delivery · ${wrap('lock')} 30-day returns</span>
+        <span class="pay-notes">${wrap('check')} Student verified · ${wrap('pin')} Campus pickup · ${wrap('leaf')} Second-hand first</span>
       </div>
     </footer>`;
 
@@ -553,37 +553,40 @@
   /* Home page assembly */
   App.initHome = function () {
     if (PAGE !== 'home') return;
-    const newEl = document.querySelector('.home-new-grid');
-    if (newEl) {
-      const src = window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS;
-      const fresh = src.filter(p => p.isNew).slice(0, 10);
-      newEl.innerHTML = fresh.map(p => App.renderCard(p)).join('');
+    const avail = window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS;
+    const byRecent = (list) => list.slice().sort((a, b) => (a.listedDaysAgo || 0) - (b.listedDaysAgo || 0));
+    const fill = (sel, list) => { const el = document.querySelector(sel); if (el) el.innerHTML = list.map(p => App.renderCard(p)).join(''); };
+
+    const recent = byRecent(avail);
+
+    /* Just Listed — the newest four */
+    fill('.home-just-grid', recent.slice(0, 4));
+    /* Fresh on Campus — recently listed by students */
+    fill('.home-fresh-grid', recent.slice(4, 12));
+
+    /* Student Closet — clothing, accessories, footwear, bags & jewellery */
+    const closetCats = new Set(['clothing', 'accessories', 'shoes', 'bags', 'jewellery']);
+    fill('.home-closet-grid', byRecent(avail.filter(p => closetCats.has(p.category))).slice(0, 8));
+
+    /* Under ₹500 */
+    fill('.home-under-grid', byRecent(avail.filter(p => p.price <= 500)).slice(0, 8));
+
+    /* Dorm Finds */
+    fill('.home-dorm-grid', byRecent(avail.filter(p => p.category === 'home')).slice(0, 4));
+
+    /* Books & Academics — show a listing invite while the shelf is empty */
+    const booksEl = document.querySelector('.home-books-grid');
+    if (booksEl) {
+      const bookList = byRecent(avail.filter(p => p.category === 'books')).slice(0, 4);
+      booksEl.innerHTML = bookList.length
+        ? bookList.map(p => App.renderCard(p)).join('')
+        : `<div class="empty-cta">${App.icon('book', 'i-lg')}<b>No textbooks listed yet.</b><span>Be the first from Ashoka to pass one on.</span><a class="btn btn-rose btn-sm" href="sell.html">List a textbook</a></div>`;
     }
-    const bestEl = document.querySelector('.home-best-grid');
-    if (bestEl) {
-      const src2 = window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS;
-      const top = src2.slice().sort((a, b) => b.popularity - a.popularity).slice(0, 8);
-      bestEl.innerHTML = top.map(p => App.renderCard(p)).join('');
-    }
-    const trendEl = document.querySelector('.home-editorial-grid');
-    if (trendEl) {
-      const picks = (window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS).filter(p => p.popularity >= 80).sort((a, b) => b.rating - a.rating).slice(0, 3);
-      trendEl.innerHTML = picks.map(p => `
-        <article class="ed-card reveal">
-          <a class="thumb" href="product.html?id=${p.id}"><div class="ed-media"><img class="img-soft" src="${p.images[0]}" alt="${App.esc(p.name)}" loading="lazy">
-            <span class="ed-tag">Trending</span></div></a>
-          <div class="ed-body">
-            <h3><a href="product.html?id=${p.id}">${App.esc(p.name)}</a></h3>
-            <p>${App.esc((p.description || '').slice(0, 92))}…</p>
-            <a class="ed-link" href="product.html?id=${p.id}">Shop the piece ${App.icon('arrow')}</a>
-          </div>
-        </article>`).join('');
-    }
+
+    /* feature slab image — a lived-in campus find */
     const featureEl = document.querySelector('.home-feature-media');
     if (featureEl) {
-      const star = window.getProduct('beige-highwaist-trousers') && !(window.MP && MP.isSold('beige-highwaist-trousers'))
-        ? window.getProduct('beige-highwaist-trousers')
-        : ((window.MP ? MP.available(window.PRODUCTS) : window.PRODUCTS).filter(p => p.popularity >= 90)[0] || window.PRODUCTS[0]);
+      const star = recent.find(p => p.category === 'clothing') || recent[0] || window.PRODUCTS[0];
       featureEl.style.backgroundImage = `url(${star.images[0]})`;
       featureEl.innerHTML = `<span class="deco-flower" data-icon="flower"></span>`;
     }
@@ -654,7 +657,7 @@
         <div class="oc-items">${itemsRow}</div>
         <div class="oc-meta">
           <span>Placed ${new Date(o.placedAt).toLocaleDateString('en-GB', { day: 'numeric', month: 'short', year: 'numeric' })}</span>
-          <span>${o.delivery === 'express' ? 'Express delivery' : 'Standard delivery'} · arrives ${o.eta}</span>
+          <span>Campus pickup · ${o.eta}</span>
         </div>
         <div class="oc-actions">
           <button class="btn btn-light btn-sm" data-order-view="${o.number}">View details</button>

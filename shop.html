@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260916j">
-<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+<link rel="stylesheet" href="css/style.css?v=20260916z">
+<link rel="stylesheet" href="css/responsive.css?v=20260916z">
 </head>
 <body data-page="shop">
 
@@ -28,9 +28,9 @@
     <span class="deco-leaf-tl" data-icon="sprig"></span>
     <span class="deco-leaf-c" style="right:3%;bottom:6%" data-icon="leaf"></span>
     <div class="container">
-      <p class="eyebrow">the full edit</p>
-      <h1 class="shop-title">All products</h1>
-      <p>Every bloom, every season · one considered collection.</p>
+      <p class="eyebrow">browse campus listings</p>
+      <h1 class="shop-title">All listings</h1>
+      <p>Everything here is listed by a student at Ashoka · pre-owned, handmade and passed on.</p>
     </div>
   </section>
 
@@ -58,12 +58,11 @@
             <span class="count shop-count">0 products</span>
             <span class="spacer"></span>
             <input type="search" class="shop-search-input" placeholder="Search in results…" aria-label="Search within results">
-            <select class="sort-select" aria-label="Sort products">
-              <option value="popular">Sort: Featured</option>
-              <option value="newest">Sort: Newest</option>
+            <select class="sort-select" aria-label="Sort listings">
+              <option value="recent">Sort: Recently listed</option>
               <option value="price-asc">Price: Low to High</option>
               <option value="price-desc">Price: High to Low</option>
-              <option value="rating">Top rated</option>
+              <option value="seller">Seller rating</option>
             </select>
             <button class="btn btn-outline btn-sm" data-filter-open>Filter</button>
             <div class="view-toggle" role="group" aria-label="View mode">
@@ -76,8 +75,8 @@
 
           <div class="no-results" style="display:none">
             <div class="flower-big" data-icon="flower" data-icon-class="i-xl"></div>
-            <h3>Nothing in this patch right now</h3>
-            <p>Try clearing a filter or two · or search for something like “linen” or “silver”.</p>
+            <h3>No listings match that</h3>
+            <p>Try clearing a filter, or search for something like “jeans” or “textbook”.</p>
             <button class="btn btn-primary" data-reset-empty>Clear all filters</button>
           </div>
         </div>
@@ -88,12 +87,12 @@
 
 <div id="app-footer"></div>
 
-<script src="js/products.js?v=20260916j"></script>
-<script src="js/marketplace.js?v=20260916j"></script>
-<script src="js/app.js?v=20260916j"></script>
-<script src="js/cart.js?v=20260916j"></script>
-<script src="js/wishlist.js?v=20260916j"></script>
-<script src="js/shop.js?v=20260916j"></script>
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script src="js/shop.js?v=20260916z"></script>
 <script>
   /* reset button in no-results */
   document.querySelectorAll('[data-reset-empty]').forEach(b => b.addEventListener('click', () => {

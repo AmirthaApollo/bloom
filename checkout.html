@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260916j">
-<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+<link rel="stylesheet" href="css/style.css?v=20260916z">
+<link rel="stylesheet" href="css/responsive.css?v=20260916z">
 </head>
 <body data-page="checkout">
 
@@ -43,7 +43,7 @@
     <div class="eta-row">
       <div class="eta"><b class="success-total">₹0</b><small>total paid</small></div>
       <div class="eta"><b class="success-pay">Paid by card</b><small>payment method</small></div>
-      <div class="eta"><b class="eta-arrive"></b><small>estimated arrival</small></div>
+      <div class="eta"><b class="eta-arrive"></b><small>campus handoff</small></div>
     </div>
     <div class="success-notify">
       <div class="notify-title"><span data-icon="check" data-icon-class="i-sm"></span> Seller notified</div>
@@ -68,7 +68,7 @@
       <div class="steps" aria-label="Checkout progress">
         <span class="step on"><span class="step-num">1</span><span>Address</span></span>
         <span class="step-sep" data-icon="flower" data-icon-class="i-xs"></span>
-        <span class="step"><span class="step-num">2</span><span>Delivery</span></span>
+        <span class="step"><span class="step-num">2</span><span>Pickup</span></span>
         <span class="step-sep" data-icon="flower" data-icon-class="i-xs"></span>
         <span class="step"><span class="step-num">3</span><span>Payment</span></span>
         <span class="step-sep" data-icon="flower" data-icon-class="i-xs"></span>
@@ -107,19 +107,14 @@
 
         <!-- STEP 2 · DELIVERY -->
         <div class="co-card" data-panel="delivery" style="display:none">
-          <h3><span class="ico" data-icon="truck" data-icon-class="i-sm"></span> Choose delivery</h3>
+          <h3><span class="ico" data-icon="pin" data-icon-class="i-sm"></span> Campus pickup</h3>
           <label class="delivery-method sel">
-            <input type="radio" name="delivery" value="standard" checked>
-            <span class="dm-icon" data-icon="leaf" data-icon-class="i-sm"></span>
-            <span><span class="dm-name">Green standard</span><span class="dm-eta">Arrives in 4–5 days · carbon neutral · FREE over ₹4,999</span></span>
-            <span class="dm-price">₹499</span>
+            <input type="radio" name="delivery" value="pickup" checked>
+            <span class="dm-icon" data-icon="user" data-icon-class="i-sm"></span>
+            <span><span class="dm-name">On-campus handoff</span><span class="dm-eta">Coordinate directly with the seller · no shipping, no waiting</span></span>
+            <span class="dm-price" style="color:var(--good)">FREE</span>
           </label>
-          <label class="delivery-method">
-            <input type="radio" name="delivery" value="express">
-            <span class="dm-icon" data-icon="sparkle" data-icon-class="i-sm"></span>
-            <span><span class="dm-name">Fresh express</span><span class="dm-eta">Arrives in 2 days · tracked to your door</span></span>
-            <span class="dm-price">₹1,200</span>
-          </label>
+          <p style="color:var(--muted);font-size:.88rem;margin-top:12px">Bloom sends the seller an email so you can agree on a time and place on campus. Payment is held until the handoff is confirmed.</p>
           <div class="co-actions">
             <button class="btn btn-primary btn-lg btn-block" data-nav="back"><span data-icon="arrowL" data-icon-class="i-sm"></span> Back to address</button>
             <button class="btn btn-rose btn-lg btn-block" data-nav="next">Continue to payment</button>
@@ -183,7 +178,7 @@
         <div class="co-actions">
           <a class="btn btn-light" href="cart.html"><span data-icon="arrowL" data-icon-class="i-sm"></span> Edit bag</a>
         </div>
-        <div class="co-hint"><span data-icon="check" data-icon-class="i-xs"></span> 30-day returns · <span data-icon="check" data-icon-class="i-xs"></span> SSL secure · <span data-icon="check" data-icon-class="i-xs"></span> carbon-neutral shipping</div>
+        <div class="co-hint"><span data-icon="check" data-icon-class="i-xs"></span> Campus pickup · <span data-icon="check" data-icon-class="i-xs"></span> student sellers · <span data-icon="check" data-icon-class="i-xs"></span> secure simulation</div>
       </div>
     </div>
   </div>
@@ -191,12 +186,12 @@
 
 <div id="app-footer"></div>
 
-<script src="js/products.js?v=20260916j"></script>
-<script src="js/marketplace.js?v=20260916j"></script>
-<script src="js/app.js?v=20260916j"></script>
-<script src="js/cart.js?v=20260916j"></script>
-<script src="js/wishlist.js?v=20260916j"></script>
-<script src="js/checkout.js?v=20260916j"></script>
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script src="js/checkout.js?v=20260916z"></script>
 <script>App.boot()</script>
 </body>
 </html>

@@ -50,8 +50,9 @@
   /* ---------- identity ---------- */
   document.querySelector('.product-info h1').textContent = p.name;
   const pBrandEl = document.querySelector('.p-brand');
-  const brandMeta = App.brandRating(p.brand);
-  pBrandEl.innerHTML = `${App.esc(p.brand)}${brandMeta ? `<span class="p-brand-rate">${App.icon('star', 'i-xs')} ${brandMeta.rating} · ${brandMeta.count} ${App.maybePlural(brandMeta.count, 'piece')}</span>` : ''}`;
+  if (p.seller) {
+    pBrandEl.innerHTML = `Listed by <b>${App.esc(p.seller.name)}</b> <span class="p-brand-rate">@${App.esc(p.seller.username)}</span>`;
+  } else { pBrandEl.textContent = 'Student listing'; }
   const tagsEl = document.querySelector('.p-tags');
   tagsEl.innerHTML = (p.tags || []).map(t => `<span class="p-tag">${App.esc(t)}</span>`).join('');
   const crumbCat = document.querySelector('.crumb-cat');
@@ -63,28 +64,40 @@
 
   /* badges on gallery */
   const badges = [];
-  if (p.discount) badges.push(`<span class="badge badge-sale">−${p.discount}%</span>`);
-  if (p.isNew) badges.push(`<span class="badge badge-new">New arrival</span>`);
+  if (p.condition) badges.push(App.conditionChip(p));
+  if (p.listedDaysAgo != null && p.listedDaysAgo <= 2) badges.push('<span class="badge badge-new">Just listed</span>');
   document.querySelector('.gallery-main .badges').innerHTML = badges.join('');
 
   /* ---------- info ---------- */
   const priceEl = document.querySelector('.p-price');
   const ratingRow = document.querySelector('.p-meta-row');
-  ratingRow.querySelector('.reviews-count').textContent = `${p.reviews.toLocaleString()} reviews`;
-  ratingRow.querySelector('.reviews-count').addEventListener('click', () => { location.hash = 'reviews'; });
+  const seller = p.seller || { name: 'A student', username: 'student', rating: 5, sales: 0, responseRate: 100, responseTime: 'same day', university: (window.MP ? MP.university() : 'Ashoka University') };
+  ratingRow.querySelector('.stars').innerHTML = App.stars(seller.rating);
+  ratingRow.querySelector('.reviews-count').textContent = `${seller.sales} ${App.maybePlural(seller.sales, 'sale')}`;
+  ratingRow.querySelector('.reviews-count').addEventListener('click', () => { location.hash = 'about-seller'; });
 
-  priceEl.innerHTML = `<span class="price-now">${App.money(p.price)}</span>` +
-    (p.originalPrice ? `<span class="price-was">${App.money(p.originalPrice)}</span>` : '') +
-    (p.discount ? `<span class="price-disc">Save ${p.discount}%</span>` : '');
+  priceEl.innerHTML = `<span class="price-now">${App.money(p.price)}</span>`;
+
+  const condEl = document.querySelector('.p-cond-value');
+  if (condEl) condEl.innerHTML = App.conditionChip(p) || '—';
 
   document.title = `${p.name} · Bloom`;
 
-  /* stock hint (deterministic pseudo-random) */
-  const stockLeft = 1 + (hash(p.id) % 9);
-  const lowStock = stockLeft <= 4;
   const stockEl = document.querySelector('.p-stock');
-  stockEl.innerHTML = `${lowStock ? 'Only ' + stockLeft + ' left' : 'In stock'} · ships in 1–2 days`;
-  if (lowStock) stockEl.classList.add('low');
+  stockEl.innerHTML = `Campus pickup · ${App.esc(p.condition || 'pre-owned')}`;
+
+  /* about the seller */
+  const as = document.querySelector('.about-seller');
+  if (as) {
+    as.querySelector('.as-avatar').textContent = (seller.name || 'S').trim().charAt(0).toUpperCase();
+    as.querySelector('.as-name').textContent = seller.name;
+    as.querySelector('.as-username').textContent = '@' + seller.username;
+    as.querySelector('.as-rating').innerHTML = App.icon('star', 'i-xs') + ' ' + seller.rating;
+    as.querySelector('.as-sales').textContent = seller.sales;
+    as.querySelector('.as-response').textContent = seller.responseRate + '%';
+    as.querySelector('.as-uni-name').textContent = seller.university;
+    as.querySelector('.as-time').textContent = seller.responseTime;
+  }
 
   /* ---------- sizes ---------- */
   const hasSizes = p.sizes && p.sizes.length;
@@ -188,28 +201,6 @@
   Wishlist.sync();
   if (Wishlist.has(p.id)) document.querySelector('.p-wishlist').classList.add('liked');
 
-  /* ---------- pincode ---------- */
-  const pinInput = document.querySelector('.pin-input');
-  const pinMsg = document.querySelector('.pin-msg');
-  const pinBtn = document.querySelector('.pin-check');
-  pinBtn.addEventListener('click', () => {
-    const v = pinInput.value.replace(/\D/g, '');
-    if (v.length !== 6) {
-      pinMsg.className = 'pin-msg err';
-      pinMsg.textContent = 'Enter a 6-digit pincode.';
-      return;
-    }
-    if (new Set(v).size === 1) {
-      pinMsg.className = 'pin-msg err';
-      pinMsg.textContent = 'Hmm · check that pincode.';
-      return;
-    }
-    const days = 4 + (hash(v) % 3);
-    pinMsg.className = 'pin-msg';
-    const d = new Date(Date.now() + days * 86400000);
-    pinMsg.innerHTML = `Delivery available · arrives by <b>${d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' })}</b>`;
-  });
-
   /* ---------- tabs ---------- */
   const tabs = document.querySelectorAll('.tablist .tab');
   const panels = document.querySelectorAll('.tab-panel');
@@ -231,14 +222,17 @@
   /* ---------- details table ---------- */
   const detailsTable = document.querySelector('.p-details-table');
   if (detailsTable) {
+    const cond = p.condition || 'Pre-owned';
+    const listed = p.listedDaysAgo != null ? (p.listedDaysAgo === 0 ? 'Today' : p.listedDaysAgo + ' day' + (p.listedDaysAgo === 1 ? '' : 's') + ' ago') : 'Recently';
     const rows = [
+      ['Condition', cond],
       ['Category', window.CATEGORY_META[p.category] ? window.CATEGORY_META[p.category].name : p.category],
-      ['Subcategory', p.subcategory || ''],
-      ['Brand', p.brand],
-      ['Fit / Note', p.name.includes('Dress') || p.name.includes('Shirt') ? 'True to size' : 'Standard sizing'],
-      ['Material', p.brand === 'Veridana' ? 'Clean, skin-safe formula' : p.tags && p.tags.length ? p.tags[0] : 'Premium'],
-      ['Tags', (p.tags || []).join(', ') || ''],
-      ['SKU', 'BLM-' + (hash(p.id) % 9000 + 1000)]
+      ['Type', p.subcategory || ''],
+      ['Seller', p.seller ? p.seller.name + ' (@' + p.seller.username + ')' : 'Student seller'],
+      ['Seller rating', p.seller ? p.seller.rating + ' · ' + p.seller.sales + ' sales' : '—'],
+      ['Campus', p.seller ? p.seller.university : 'Ashoka University'],
+      ['Listed', listed],
+      ['Listing ID', 'BLM-' + (hash(p.id) % 9000 + 1000)]
     ];
     detailsTable.querySelector('tbody').innerHTML = rows.map(r => `<tr><td>${r[0]}</td><td>${App.esc(r[1])}</td></tr>`).join('');
   }

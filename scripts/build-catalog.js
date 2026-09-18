@@ -171,10 +171,44 @@ function findSrc(entry) {
   return null;
 }
 
+/* ---------- resale layer: conditions, student sellers, pricing, listing age ---------- */
+const CONDITIONS = ['Like New', 'Like New', 'Excellent', 'Excellent', 'Good', 'Fair'];
+const SELLERS = [
+  { name: 'Aditi Rao',      username: 'aditi.r',   rating: 4.9, sales: 31, responseRate: 98, responseTime: 'within an hour' },
+  { name: 'Ananya Iyer',    username: 'ananya.i',  rating: 4.8, sales: 12, responseRate: 95, responseTime: 'same day' },
+  { name: 'Rhea Kapoor',    username: 'rhea.k',    rating: 4.7, sales: 19, responseRate: 90, responseTime: 'within a few hours' },
+  { name: 'Diya Menon',     username: 'diya.m',    rating: 5.0, sales: 8,  responseRate: 100, responseTime: 'within an hour' },
+  { name: 'Ishaan Verma',   username: 'ishaan.v',  rating: 4.6, sales: 24, responseRate: 88, responseTime: 'same day' },
+  { name: 'Kabir Shah',     username: 'kabir.s',   rating: 4.4, sales: 15, responseRate: 82, responseTime: 'within a day' },
+  { name: 'Meera Nair',     username: 'meera.n',   rating: 4.9, sales: 27, responseRate: 97, responseTime: 'within a few hours' },
+  { name: 'Nikhil Bose',    username: 'nikhil.b',  rating: 4.3, sales: 6,  responseRate: 78, responseTime: 'within a day' },
+  { name: 'Aisha Khan',     username: 'aisha.k',   rating: 4.8, sales: 22, responseRate: 93, responseTime: 'same day' },
+  { name: 'Rohit Desai',    username: 'rohit.d',   rating: 4.5, sales: 11, responseRate: 85, responseTime: 'within a few hours' },
+  { name: 'Sanya Gupta',    username: 'sanya.g',   rating: 4.7, sales: 16, responseRate: 91, responseTime: 'same day' },
+  { name: 'Vivaan Joshi',   username: 'vivaan.j',  rating: 4.2, sales: 4,  responseRate: 74, responseTime: 'within a day' },
+  { name: 'Tara Pillai',    username: 'tara.p',    rating: 4.9, sales: 35, responseRate: 99, responseTime: 'within an hour' },
+  { name: 'Arjun Reddy',    username: 'arjun.r',   rating: 4.6, sales: 18, responseRate: 87, responseTime: 'same day' },
+  { name: 'Zoya Sheikh',    username: 'zoya.s',    rating: 4.8, sales: 13, responseRate: 94, responseTime: 'within a few hours' },
+  { name: 'Dev Malhotra',   username: 'dev.m',     rating: 4.4, sales: 9,  responseRate: 80, responseTime: 'within a day' },
+  { name: 'Kavya Rao',      username: 'kavya.r',   rating: 4.7, sales: 21, responseRate: 92, responseTime: 'same day' },
+  { name: 'Yash Patel',     username: 'yash.p',    rating: 4.3, sales: 7,  responseRate: 76, responseTime: 'within a day' },
+  { name: 'Mira Sen',       username: 'mira.s',    rating: 4.9, sales: 29, responseRate: 96, responseTime: 'within an hour' },
+  { name: 'Neel Bhatia',    username: 'neel.b',    rating: 4.5, sales: 14, responseRate: 84, responseTime: 'within a few hours' },
+  { name: 'Ananya Gokhale', username: 'ananya.g',  rating: 4.8, sales: 17, responseRate: 93, responseTime: 'same day' },
+  { name: 'Riya Chatterjee',username: 'riya.c',    rating: 4.6, sales: 10, responseRate: 89, responseTime: 'within a few hours' }
+];
+const PRICE_BAND = { clothing: [199, 899], shoes: [399, 1299], bags: [349, 999], jewellery: [149, 599], beauty: [149, 499], home: [199, 799], accessories: [149, 499], books: [99, 399] };
+function hashStr(str) { let h = 2166136261; for (let i = 0; i < str.length; i++) { h ^= str.charCodeAt(i); h = Math.imul(h, 16777619); } return Math.abs(h); }
+function resalePrice(cat, h) { const band = PRICE_BAND[cat] || [199, 899]; const steps = Math.floor((band[1] - band[0]) / 50) + 1; return Math.round((band[0] + (h % steps) * 50) / 10) * 10; }
+
+/* no items are re-named: every listing keeps its original name */
+const CONVERT = {};
+
 fs.mkdirSync(DEST, { recursive: true });
 const used = new Set();
 const lines = [];
 const q = JSON.stringify;
+let i = 0;
 
 for (const e of CATALOG) {
   if (EXCLUDE.has(e.slug)) continue;
@@ -187,16 +221,22 @@ for (const e of CATALOG) {
   used.add(outName);
   fs.copyFileSync(srcPath, path.join(DEST, outName));
   const image = 'images/aclothes/' + outName;
-  const desc = e.n + ' · handcrafted ' + e.sc.toLowerCase() + ', chosen by Bloom for how well it wears and how much character it carries. Small-batch and one-of-one, so when it is gone, it is truly gone.';
+  /* re-home a few listings as books/study items */
+  if (CONVERT[e.slug]) Object.assign(e, CONVERT[e.slug]);
+
+  const h = hashStr(e.slug);
+  const seller = SELLERS[i % SELLERS.length];
+  const condition = CONDITIONS[h % CONDITIONS.length];
+  const listedDaysAgo = h % 30;
 
   /* Indian standard sizes: convert letter sizes to Indian numerics */
   const SIZE_MAP = { XS: '32', S: '34', M: '36', L: '38', XL: '40', XXL: '42' };
   const sizes = e.sz.map(s => SIZE_MAP[s] || s);
 
-  /* Convert prices to INR (≈ ₹83 / $, rounded to a clean ₹20) */
-  const inr = x => (x == null || x === 0) ? null : Math.round((Math.round(x * 83) / 20)) * 20;
-  const price = inr(e.p);
-  const originalPrice = inr(e.op);
+  /* student-friendly resale price */
+  const price = resalePrice(e.c, h);
+
+  const desc = `${e.n} · ${condition} condition · listed by ${seller.name} (${seller.username}). Pick up on campus: coordinate the handoff with the seller after checkout.`;
 
   lines.push(`
     {
@@ -206,7 +246,10 @@ for (const e of CATALOG) {
       category: ${q(e.c)},
       subcategory: ${q(e.sc)},
       price: ${price},
-      originalPrice: ${originalPrice || 'null'},
+      condition: ${q(condition)},
+      listedDaysAgo: ${listedDaysAgo},
+      seller: { name: ${q(seller.name)}, username: ${q(seller.username)}, email: ${q(seller.username + '@ashoka.edu.in')}, rating: ${seller.rating}, sales: ${seller.sales}, responseRate: ${seller.responseRate}, responseTime: ${q(seller.responseTime)}, university: 'Ashoka University' },
+      originalPrice: null,
       rating: ${e.r},
       reviews: ${e.rv},
       popularity: ${e.po},
@@ -217,6 +260,7 @@ for (const e of CATALOG) {
       images: [${q(image)}],
       description: ${q(desc)}
     }`);
+  i++;
 }
 
 /* ---------- write js/products.js ---------- */
@@ -232,13 +276,14 @@ let out = `/* ============================================================
   ];
 
   const CATEGORY_META = {
-    clothing:     { name: 'Clothing',     icon: 'dress', tagline: 'Wearable blooms', weight: 1 },
-    shoes:        { name: 'Shoes',        icon: 'shoe', tagline: 'Well-heeled garden walks', weight: 2 },
-    bags:         { name: 'Bags',         icon: 'bag', tagline: 'Carry the season', weight: 3 },
-    jewellery:    { name: 'Jewellery',    icon: 'ring', tagline: 'Botanical gold', weight: 4 },
-    beauty:       { name: 'Beauty',       icon: 'flower', tagline: 'Petals for skin', weight: 5 },
-    home:         { name: 'Home',         icon: 'home', tagline: 'Grow a softer home', weight: 6 },
-    accessories:  { name: 'Accessories',  icon: 'glasses', tagline: 'Finishing touches', weight: 7 }
+    clothing:    { name: 'Clothing',          icon: 'dress',   tagline: 'The student closet', weight: 1 },
+    shoes:       { name: 'Footwear',          icon: 'shoe',    tagline: 'Sneakers, heels & more', weight: 2 },
+    bags:        { name: 'Bags',              icon: 'bag',     tagline: 'Carry it on', weight: 3 },
+    jewellery:   { name: 'Jewellery',         icon: 'ring',    tagline: 'Little treasures', weight: 4 },
+    beauty:      { name: 'Beauty',            icon: 'flower',  tagline: 'Self-care shelf', weight: 5 },
+    accessories: { name: 'Accessories',       icon: 'glasses', tagline: 'Finishing touches', weight: 6 },
+    home:        { name: 'Dorm & Decor',      icon: 'home',    tagline: 'For your room', weight: 7 },
+    books:       { name: 'Books & Academics', icon: 'book',    tagline: 'Study essentials', weight: 8 }
   };
 
   /* materialise the discount field (per requirement) */

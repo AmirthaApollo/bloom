@@ -20,6 +20,7 @@
   const write = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch (e) {} };
 
   const UNIVERSITIES = ['Ashoka University'];
+  const BUYER_EMAIL = 'you@ashoka.edu.in';   // placeholder for the signed-in student
 
   const MP = {
     universities: UNIVERSITIES,
@@ -75,35 +76,42 @@
     /* ---- simulated seller email ---- */
     sellerEmail(order) {
       const first = (order.items && order.items[0]) || {};
+      const seller = first.seller || {};
+      const sellerAddr = seller.email || 'seller@ashoka.edu.in';
+      const buyerAddr = order.buyerEmail || BUYER_EMAIL;
       const rows = (order.items || []).map(it =>
         `<tr><td style="padding:6px 0">${window.App ? App.esc(it.name) : it.name}${it.size ? ' · ' + it.size : ''}${it.color ? ' · ' + it.color : ''}</td><td style="padding:6px 0;text-align:right">x${it.qty}</td></tr>`).join('');
       const uni = MP.university();
       return `
       <div class="email-preview">
         <div class="email-head">
-          <div class="email-row"><span>From</span><b>orders@bloom.marketplace</b></div>
-          <div class="email-row"><span>To</span><b>you · student seller at ${App ? App.esc(uni) : uni}</b></div>
+          <div class="email-row"><span>From</span><b>${App ? App.esc(buyerAddr) : buyerAddr}</b></div>
+          <div class="email-row"><span>To</span><b>${App ? App.esc(seller.name || 'you') : (seller.name || 'you')} · ${App ? App.esc(sellerAddr) : sellerAddr}</b></div>
           <div class="email-row"><span>Subject</span><b>You sold “${App ? App.esc(first.name || 'an item') : first.name}” on Bloom</b></div>
         </div>
         <div class="email-body">
-          <p>Hi there,</p>
+          <p>Hi ${App ? App.esc((seller.name || 'there').split(' ')[0]) : 'there'},</p>
           <p>Good news, someone just ordered your listing on Bloom. The item has been reserved and removed from the marketplace so no one else can buy it.</p>
           <table class="email-table"><tbody>${rows}</tbody></table>
           <p><b>Order</b> ${App ? App.esc(order.number) : order.number} &nbsp;·&nbsp; <b>Campus</b> ${App ? App.esc(uni) : uni}</p>
-          <p><b>Next step:</b> reply to this email or open your seller dashboard to coordinate an on-campus handoff with the buyer. Bloom holds the payment until the handoff is confirmed.</p>
-          <p class="email-sign">Bought and sold, on campus.<br>— The Bloom Team</p>
+          <p><b>Next step:</b> reply to this email (${App ? App.esc(buyerAddr) : buyerAddr}) to coordinate an on-campus handoff with the buyer. Bloom holds the payment until the handoff is confirmed.</p>
+          <p class="email-sign">Bought and sold, on campus.<br>The Bloom Team</p>
         </div>
-        <p class="email-note">This is a simulated email for the demo. No message was actually sent.</p>
+        <p class="email-note">This is a simulated email · the addresses are placeholders. No message was actually sent.</p>
       </div>`;
     },
 
     /* ---- simulated order-confirmation email to the buyer ---- */
     buyerEmail(order) {
+      const first = (order.items && order.items[0]) || {};
+      const seller = first.seller || {};
+      const sellerAddr = seller.email || 'seller@ashoka.edu.in';
+      const buyerAddr = order.buyerEmail || BUYER_EMAIL;
       return `
       <div class="email-preview">
         <div class="email-head">
-          <div class="email-row"><span>From</span><b>hello@bloom.marketplace</b></div>
-          <div class="email-row"><span>To</span><b>you · buyer at ${App ? App.esc(MP.university()) : MP.university()}</b></div>
+          <div class="email-row"><span>From</span><b>${App ? App.esc(seller.name || 'Your seller') : 'Your seller'} · ${App ? App.esc(sellerAddr) : sellerAddr}</b></div>
+          <div class="email-row"><span>To</span><b>${App ? App.esc(buyerAddr) : buyerAddr}</b></div>
           <div class="email-row"><span>Subject</span><b>Your Bloom order ${App ? App.esc(order.number) : order.number} is confirmed</b></div>
         </div>
         <div class="email-body">
@@ -112,7 +120,7 @@
           <p><b>Estimated handoff:</b> ${App ? App.esc(order.eta || '') : order.eta || ''}</p>
           <p class="email-sign">Bought and sold, on campus.<br>— The Bloom Team</p>
         </div>
-        <p class="email-note">This is a simulated email for the demo. No message was actually sent.</p>
+        <p class="email-note">This is a simulated email · the addresses are placeholders. No message was actually sent.</p>
       </div>`;
     },
 

@@ -33,6 +33,61 @@
   const uniEl = document.querySelector('#sell-uni');
   if (uniEl && window.MP) uniEl.textContent = MP.university();
 
+  /* ---------- photo upload ---------- */
+  let uploadedImage = null;
+  const fileInput = document.querySelector('#sell-photo');
+  const preview = document.querySelector('#sell-photo-preview');
+
+  function resizeImage(file, maxDim, quality) {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onerror = reject;
+      reader.onload = () => {
+        const img = new Image();
+        img.onerror = reject;
+        img.onload = () => {
+          const scale = Math.min(1, maxDim / Math.max(img.width, img.height));
+          const w = Math.max(1, Math.round(img.width * scale));
+          const h = Math.max(1, Math.round(img.height * scale));
+          const canvas = document.createElement('canvas');
+          canvas.width = w; canvas.height = h;
+          canvas.getContext('2d').drawImage(img, 0, 0, w, h);
+          resolve(canvas.toDataURL('image/jpeg', quality));
+        };
+        img.src = reader.result;
+      };
+      reader.readAsDataURL(file);
+    });
+  }
+
+  const uploadBox = document.querySelector('#upload-box');
+  const nameEl = document.querySelector('#sell-photo-name');
+
+  function handleFile(file) {
+    if (!file) return;
+    if (!/^image\//.test(file.type)) { App.toast('Please choose an image file.', 'error'); if (fileInput) fileInput.value = ''; return; }
+    resizeImage(file, 800, 0.78).then((dataUrl) => {
+      if (dataUrl.length > 1600000) { App.toast('That photo is a bit large · try another.', 'error'); return; }
+      uploadedImage = dataUrl;
+      if (uploadBox) uploadBox.classList.add('has-file');
+      if (nameEl) nameEl.textContent = file.name;
+      if (preview) preview.innerHTML = `<img src="${dataUrl}" alt="Selected photo">`;
+      App.toast('Photo added.', 'success');
+    }).catch(() => App.toast('Could not read that image.', 'error'));
+  }
+
+  if (fileInput) fileInput.addEventListener('change', () => handleFile(fileInput.files && fileInput.files[0]));
+
+  if (uploadBox && fileInput) {
+    ['dragenter', 'dragover'].forEach(ev => uploadBox.addEventListener(ev, (e) => { e.preventDefault(); uploadBox.classList.add('drag'); }));
+    ['dragleave', 'dragend'].forEach(ev => uploadBox.addEventListener(ev, () => uploadBox.classList.remove('drag')));
+    uploadBox.addEventListener('drop', (e) => {
+      e.preventDefault(); uploadBox.classList.remove('drag');
+      const f = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+      if (f) { try { fileInput.files = e.dataTransfer.files; } catch (x) {} handleFile(f); }
+    });
+  }
+
   /* ---------- publish a listing ---------- */
   const form = document.querySelector('#sell-form');
   if (form) form.addEventListener('submit', (e) => {
@@ -58,7 +113,7 @@
       tags: [(f.condition.value || 'Like new').toLowerCase(), 'student-listing'],
       colors: [],
       sizes: [f.size.value.trim() || 'One Size'],
-      images: [f.image.value],
+      images: [uploadedImage || f.image.value],
       description: (f.description.value.trim() || name + ' — listed by a student seller on ' + (window.MP ? MP.university() : 'campus') + '. Reach out to coordinate an on-campus handoff.'),
       discount: 0
     };
@@ -72,6 +127,10 @@
       </div>`, 'Listing published');
 
     form.reset();
+    uploadedImage = null;
+    if (preview) preview.innerHTML = '';
+    if (nameEl) nameEl.textContent = '';
+    if (uploadBox) uploadBox.classList.remove('has-file');
     renderDashboard();
     App.toast('Listing published to the marketplace.', 'success');
   });
@@ -82,7 +141,8 @@
     const sample = {
       number: 'BLM-SAMPLE-01',
       eta: 'this week',
-      items: [{ name: 'White Co-ord Set', qty: 1, size: 'M' }]
+      buyerEmail: 'you@ashoka.edu.in',
+      items: [{ name: 'White Co-ord Set', qty: 1, size: 'M', seller: { name: 'Ananya Iyer', email: 'ananya.i@ashoka.edu.in' } }]
     };
     App.openModal(MP.sellerEmail(sample), 'Sample seller email');
   });
@@ -155,7 +215,7 @@
       const id = b.getAttribute('data-simulate');
       const p = window.getProduct(id);
       if (!p) return;
-      const order = { number: 'BLM-' + Date.now().toString().slice(-6), eta: 'this week', items: [{ name: p.name, id: p.id, qty: 1, size: (p.sizes || [])[0] }] };
+      const order = { number: 'BLM-' + Date.now().toString().slice(-6), eta: 'this week', items: [{ name: p.name, id: p.id, qty: 1, size: (p.sizes || [])[0], seller: p.seller ? { name: p.seller.name, email: p.seller.email } : null }] };
       MP.markSold(id);
       MP.notify({ kind: 'order', order: order.number, items: order.items, university: MP.university() });
       renderDashboard();

@@ -10,8 +10,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,100..900&family=Jost:ital,wght@0,200..600;1,200..600&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css?v=20260916j">
-<link rel="stylesheet" href="css/responsive.css?v=20260916j">
+<link rel="stylesheet" href="css/style.css?v=20260916z">
+<link rel="stylesheet" href="css/responsive.css?v=20260916z">
 <style>
 .gallery-main.fading img { opacity: .35; transition: opacity .22s; }
 .p-wishlist.liked { background: var(--blush); color: var(--rose); border-color: #e9c8b4; }
@@ -39,7 +39,7 @@
           <small class="zoom-hint">hover to zoom</small>
         </div>
         <div class="gallery-thumbs"></div>
-        <p class="gallery-tag"><span data-icon="leaf" data-icon-class="i-sm"></span> Responsible materials · made in small batches</p>
+        <p class="gallery-tag"><span data-icon="leaf" data-icon-class="i-sm"></span> Pre-owned · passing it on</p>
       </div>
 
       <!-- ====== INFO ====== -->
@@ -48,9 +48,10 @@
         <h1></h1>
         <div class="p-tags"></div>
         <div class="p-price"></div>
+        <div class="p-condition"><b>Condition</b> <span class="p-cond-value"></span></div>
         <div class="p-meta-row">
           <span class="stars"></span>
-          <a class="reviews-count" href="#reviews" style="margin-left:8px">…</a>
+          <a class="reviews-count" href="#about-seller" style="margin-left:8px">…</a>
           <span class="p-stock"></span>
         </div>
 
@@ -82,17 +83,33 @@
         </div>
 
         <div class="p-usp" style="margin-top:18px">
-          <span><span data-icon="leaf" data-icon-class="i-sm"></span> Free delivery over ₹4,999</span>
-          <span><span data-icon="back" data-icon-class="i-sm"></span> 30-day returns</span>
-          <span><span data-icon="check" data-icon-class="i-sm"></span> In stock</span>
+          <span><span data-icon="pin" data-icon-class="i-sm"></span> Campus pickup</span>
+          <span><span data-icon="user" data-icon-class="i-sm"></span> Student seller</span>
+          <span><span data-icon="leaf" data-icon-class="i-sm"></span> Second-hand first</span>
         </div>
 
-        <div class="pincode">
-          <span class="pin-ico" data-icon="pin" data-icon-class="i-sm"></span>
-          <span style="color:var(--muted)">Check delivery to your pincode</span>
-          <input class="pin-input" inputmode="numeric" maxlength="6" placeholder="e.g. 560001" aria-label="Pincode">
-          <button class="pin-check" type="button">Check</button>
-          <span class="pin-msg"></span>
+        <div class="campus-pickup">
+          <span class="pickup-ico" data-icon="pin" data-icon-class="i-sm"></span>
+          <div>
+            <b>Campus pickup</b>
+            <p>Coordinate directly with the seller for an on-campus handoff. No shipping, no waiting.</p>
+          </div>
+        </div>
+
+        <div class="about-seller" id="about-seller">
+          <div class="as-head">
+            <span class="as-avatar"></span>
+            <div>
+              <b class="as-name">—</b>
+              <small class="as-username"></small>
+            </div>
+          </div>
+          <div class="as-stats">
+            <div><b class="as-rating">—</b><small>seller rating</small></div>
+            <div><b class="as-sales">—</b><small>successful sales</small></div>
+            <div><b class="as-response">—</b><small>response rate</small></div>
+          </div>
+          <p class="as-uni"><span data-icon="pin" data-icon-class="i-xs"></span> <span class="as-uni-name"></span> · usually replies <span class="as-time"></span></p>
         </div>
       </div>
     </div>
@@ -106,17 +123,17 @@
     </div>
 
     <div class="tab-panel" data-tab="details" role="tabpanel">
-      <h3 style="font-size:1.35rem">About this piece</h3>
+      <h3 style="font-size:1.35rem">About this listing</h3>
       <p style="margin-top:10px;color:var(--ink)"></p>
-      <p style="margin-top:14px;color:var(--muted)">Each Bloom piece is chosen for how it wears, sits and softens over time. If it isn’t perfect, our 30-day returns are free · no questions, no dreaded forms.</p>
+      <p style="margin-top:14px;color:var(--muted)">Listed by a fellow student at Ashoka. Check the photos and condition notes, message the seller if you have questions, and arrange an on-campus handoff after checkout.</p>
       <table class="p-details-table" style="max-width:560px;margin-top:18px">
         <tbody></tbody>
       </table>
     </div>
 
     <div class="tab-panel" data-tab="reviews" role="tabpanel" style="display:none">
-      <h3 style="font-size:1.35rem">Ratings &amp; reviews</h3>
-      <p style="color:var(--muted);margin-top:6px"><span class="rv-total">…</span> · verified Bloom buyers</p>
+      <h3 style="font-size:1.35rem">Reviews</h3>
+      <p style="color:var(--muted);margin-top:6px"><span class="rv-total">…</span> · from students who bought from this seller</p>
       <div class="review-list" style="margin-top:14px"></div>
 
       <form class="review-form">
@@ -137,7 +154,7 @@
     <div class="container">
       <div class="section-head">
         <span class="eyebrow">you may also like</span>
-        <h2>Pairs beautifully with</h2>
+        <h2>More from the campus</h2>
       </div>
       <div class="products-grid related-grid"></div>
     </div>
@@ -148,12 +165,12 @@
 
 <div id="app-footer"></div>
 
-<script src="js/products.js?v=20260916j"></script>
-<script src="js/marketplace.js?v=20260916j"></script>
-<script src="js/app.js?v=20260916j"></script>
-<script src="js/cart.js?v=20260916j"></script>
-<script src="js/wishlist.js?v=20260916j"></script>
-<script src="js/product.js?v=20260916j"></script>
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script src="js/product.js?v=20260916z"></script>
 <script>App.boot()</script>
 </body>
 </html>

@@ -25,7 +25,7 @@
 
   const S = {
     address: loadProfile(),
-    delivery: 'standard',
+    delivery: 'pickup',
     payment: 'card'
   };
 
@@ -54,7 +54,7 @@
     const items = Cart.items();
     const sub = Cart.subtotal();
     const disc = Cart.discountAmount();
-    const fee = S.delivery === 'express' ? 1200 : Cart.deliveryFee();
+    const fee = 0;
     subtotalEl.textContent = App.money(sub);
     discEl.textContent = disc ? '−' + App.money(disc) : App.money(0);
     feeEl.innerHTML = fee ? App.money(fee) : '<span style="color:var(--good)">FREE</span>';
@@ -157,7 +157,7 @@
   const successEta = successEl.querySelector('.eta-arrive');
 
   placeBtn.addEventListener('click', async () => {
-    if (!S.address) { setStep(0); App.toast('Please fill in your delivery address first.', 'error'); return; }
+    if (!S.address) { setStep(0); App.toast('Please add your campus details first.', 'error'); return; }
     if (S.payment === 'card') {
       const num = document.querySelector('[name="cc"]');
       const exp = document.querySelector('[name="cexp"]');
@@ -174,15 +174,15 @@
     const orderId = 'BLM' + String(Date.now()).slice(-6) + String(Math.floor(Math.random() * 90 + 10));
     const sub = Cart.subtotal();
     const disc = Cart.discountAmount();
-    const fee = S.delivery === 'express' ? 1200 : Cart.deliveryFee();
+    const fee = 0;
     const total = Math.max(0, sub - disc + fee);
-    const etaDays = S.delivery === 'express' ? 2 : (Cart.deliveryFee() === 0 ? 4 : 5);
+    const etaDays = 2;
     const d = new Date(Date.now() + etaDays * 86400000);
 
     const order = {
       number: orderId,
       placedAt: new Date().toISOString(),
-      items: Cart.items().map(it => { const pr = window.getProduct(it.id); return { id: it.id, name: pr.name, brand: pr.brand, image: pr.images[0], size: it.size, color: it.color, qty: it.qty, price: pr.price }; }),
+      items: Cart.items().map(it => { const pr = window.getProduct(it.id); return { id: it.id, name: pr.name, brand: pr.brand, image: pr.images[0], size: it.size, color: it.color, qty: it.qty, price: pr.price, seller: pr.seller ? { name: pr.seller.name, email: pr.seller.email } : null }; }),
       subtotal: sub, discount: disc, delivery: fee, total,
       address: S.address, delivery: S.delivery, payment: S.payment,
       eta: d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' }),
@@ -196,7 +196,7 @@
     successNum.textContent = orderId;
     successEta.textContent = d.toLocaleDateString('en-GB', { weekday: 'long', day: 'numeric', month: 'long' });
     successEl.querySelector('.success-total').textContent = App.money(total);
-    successEl.querySelector('.success-pay').textContent = S.payment === 'card' ? 'Paid by card' : S.payment === 'upi' ? 'Paid by UPI' : 'Pay on delivery';
+    successEl.querySelector('.success-pay').textContent = S.payment === 'card' ? 'Paid by card' : S.payment === 'upi' ? 'Paid by UPI' : 'Pay on pickup';
 
     /* sales simulation: reserve/remove the ordered items + notify the seller */
     if (window.MP) {

@@ -109,9 +109,21 @@
                 </select>
               </label>
               <label class="field"><span>Size (optional)</span><input type="text" name="size" placeholder="M / UK 6 / One Size"></label>
-              <label class="field"><span>Photo</span><select name="image" id="sell-image"></select></label>
+              <div class="field">
+                <span>Photo</span>
+                <input type="file" name="photo" id="sell-photo" accept="image/*" class="upload-input sr-only">
+                <label class="upload-box" id="upload-box" for="sell-photo">
+                  <span class="upload-ico" data-icon="upload" data-icon-class="i-lg"></span>
+                  <b class="upload-title">Upload a photo</b>
+                  <span class="upload-hint">Drag &amp; drop, choose from your device, or take one on your phone.</span>
+                  <span class="upload-btn">Choose file</span>
+                  <span class="upload-file" id="sell-photo-name"></span>
+                  <span class="photo-preview" id="sell-photo-preview"></span>
+                </label>
+              </div>
             </div>
-            <label class="field"><span>Description</span><textarea name="description" placeholder="Tell buyers about the item — fit, flaws, why you love it."></textarea></label>
+            <label class="field"><span>Or choose a sample photo</span><select name="image" id="sell-image"></select></label>
+            <label class="field"><span>Description</span><textarea name="description" placeholder="Tell buyers about the item · fit, flaws, why you love it."></textarea></label>
             <button class="btn btn-primary btn-lg" type="submit">Publish listing <span class="btn-ic" data-icon="arrow" data-icon-class="i-sm"></span></button>
           </form>
         </div>
@@ -167,12 +179,12 @@
 
 <div id="app-footer"></div>
 
-<script src="js/products.js?v=20260916j"></script>
-<script src="js/marketplace.js?v=20260916j"></script>
-<script src="js/app.js?v=20260916j"></script>
-<script src="js/cart.js?v=20260916j"></script>
-<script src="js/wishlist.js?v=20260916j"></script>
-<script src="js/sell.js?v=20260916j"></script>
+<script src="js/products.js?v=20260916z"></script>
+<script src="js/marketplace.js?v=20260916z"></script>
+<script src="js/app.js?v=20260916z"></script>
+<script src="js/cart.js?v=20260916z"></script>
+<script src="js/wishlist.js?v=20260916z"></script>
+<script src="js/sell.js?v=20260916z"></script>
 <script>App.boot()</script>
 </body>
 </html>
