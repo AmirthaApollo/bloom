@@ -1,11 +1,11 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Bloom">
-  <rect width="64" height="64" rx="15" fill="#faf7f1"/>
-  <g fill="none" stroke="#4d5a45" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="64" height="64" rx="15" fill="#F9F7F2"/>
+  <g fill="none" stroke="#20233A" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round">
     <circle cx="32" cy="19.5" r="8.6"/>
     <circle cx="43.1" cy="27.6" r="8.6"/>
     <circle cx="38.9" cy="40.7" r="8.6"/>
     <circle cx="25.1" cy="40.7" r="8.6"/>
     <circle cx="20.9" cy="27.6" r="8.6"/>
   </g>
-  <circle cx="32" cy="30.5" r="4.4" fill="#bb5a40"/>
+  <circle cx="32" cy="30.5" r="4.4" fill="#8B8FE8"/>
 </svg>

@@ -149,7 +149,7 @@
       const name = `${unit.brand} · ${unit.name}`;
       Cart.notifyAdded(name, unit.images[0], 1);
       Cart.announceCartOpen();
-      if (btnEl) { btnEl.classList.add('added'); btnEl.innerHTML = 'Added'; setTimeout(() => { btnEl.classList.remove('added'); btnEl.innerHTML = 'Add to bag'; }, 1400); }
+      if (btnEl) { btnEl.classList.add('added'); btnEl.innerHTML = 'Added'; setTimeout(() => { btnEl.classList.remove('added'); btnEl.innerHTML = 'Add to Cart'; }, 1400); }
     },
 
     notifyAdded(name, imgSrc, qty) {

@@ -23,8 +23,8 @@
       popularity: 78,
       isNew: true,
       tags: ["vintage","patent","kitten-heel"],
-      colors: ["Burgundy","Black"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      colors: ["Burgundy"],
+      sizes: ["UK 7"],
       images: ["images/aclothes/maryjanes-burgundy.jpg"],
       description: "Burgundy Patent Slingback Mary Janes · Good condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -45,7 +45,7 @@
       isNew: false,
       tags: ["embroidered","lace","black"],
       colors: ["Black"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      sizes: ["UK 3"],
       images: ["images/aclothes/alibox-gift-bundle.jpg"],
       description: "Embroidered Black Lace Shoes · Like New condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -87,7 +87,7 @@
       isNew: false,
       tags: ["bleach","summer","streetwear"],
       colors: ["White"],
-      sizes: ["34","36","38"],
+      sizes: ["38"],
       images: ["images/aclothes/bleach-tank-top.jpg"],
       description: "Bleach Design Tank Top · Fair condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -107,8 +107,8 @@
       popularity: 74,
       isNew: true,
       tags: ["block-print","cotton","crop"],
-      colors: ["Cream","Blue"],
-      sizes: ["34","36","38","40"],
+      colors: ["Cream"],
+      sizes: ["38"],
       images: ["images/aclothes/comfort-cream-crop-tee.jpg"],
       description: "Block-Printed Cream Crop Tee · Excellent condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -128,8 +128,8 @@
       popularity: 93,
       isNew: true,
       tags: ["handmade","leather","traditional"],
-      colors: ["Tan","Maroon"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9"],
+      colors: ["Maroon"],
+      sizes: ["UK 8"],
       images: ["images/aclothes/kolhapuri-sandals.jpg"],
       description: "Earthy Kolhapuri Sandals · Excellent condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -171,7 +171,7 @@
       isNew: false,
       tags: ["bleach","streetwear","graphic"],
       colors: ["Black"],
-      sizes: ["34","36","38"],
+      sizes: ["38"],
       images: ["images/aclothes/guitar-bleach-tank.jpg"],
       description: "Hand-Bleached Guitar Tank · Excellent condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -213,7 +213,7 @@
       isNew: true,
       tags: ["hand-painted","denim","one-of-one"],
       colors: ["Indigo"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["38"],
       images: ["images/aclothes/handpainted-wide-jeans.jpg"],
       description: "Hand-Painted Wide Denim Jeans · Like New condition · listed by Rohit Desai (rohit.d). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -234,7 +234,7 @@
       isNew: false,
       tags: ["painted","celestial","denim"],
       colors: ["Washed Blue"],
-      sizes: ["34","36","38","40"],
+      sizes: ["36"],
       images: ["images/aclothes/moon-sun-jeans.jpg"],
       description: "Moon & Sun Painted Jeans · Excellent condition · listed by Sanya Gupta (sanya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -296,8 +296,8 @@
       popularity: 89,
       isNew: true,
       tags: ["linen","shirt","handmade"],
-      colors: ["Beige","Green"],
-      sizes: ["32","34","36","38","40"],
+      colors: ["Green"],
+      sizes: ["34"],
       images: ["images/aclothes/bohemian-linen-dress.jpg"],
       description: "Bohemian Pure Linen Shirt · Fair condition · listed by Arjun Reddy (arjun.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -317,7 +317,7 @@
       popularity: 47,
       isNew: false,
       tags: ["ceramic","earrings","handmade"],
-      colors: ["Terracotta","Cream"],
+      colors: ["Cream"],
       sizes: ["One Size"],
       images: ["images/aclothes/collectors-ceramic-vessel.jpg"],
       description: "Ceramic Earrings · Like New condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -339,7 +339,7 @@
       isNew: true,
       tags: ["printed","oversized","statement"],
       colors: ["Multicolour"],
-      sizes: ["34","36","38"],
+      sizes: ["34"],
       images: ["images/aclothes/tiger-eye-shirt.jpg"],
       description: "Tiger Eye Statement Shirt · Excellent condition · listed by Dev Malhotra (dev.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -360,7 +360,7 @@
       isNew: false,
       tags: ["graphic","streetwear"],
       colors: ["Black"],
-      sizes: ["34","36","38","40"],
+      sizes: ["38"],
       images: ["images/aclothes/tiger-graphic-tee.jpg"],
       description: "Tiger Graphic Tee · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -381,7 +381,7 @@
       isNew: false,
       tags: ["bleach","crop","streetwear"],
       colors: ["Black"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["32"],
       images: ["images/aclothes/bleach-streetwear-tee.jpg"],
       description: "Trendy Bleach Crop Top · Good condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -401,7 +401,7 @@
       popularity: 72,
       isNew: false,
       tags: ["wire","earrings","minimal"],
-      colors: ["Silver","Gold"],
+      colors: ["Silver"],
       sizes: ["One Size"],
       images: ["images/aclothes/embroidered-slip-dress.jpg"],
       description: "Wire Earrings · Excellent condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -422,8 +422,8 @@
       popularity: 84,
       isNew: true,
       tags: ["sneakers","graphic","streetwear"],
-      colors: ["Black","Red"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
+      colors: ["Black"],
+      sizes: ["UK 9"],
       images: ["images/aclothes/chanderi-co-ord.jpg"],
       description: "Spiderman Sneakers · Like New condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -443,7 +443,7 @@
       popularity: 87,
       isNew: false,
       tags: ["clay","earrings","handmade"],
-      colors: ["Terracotta","Cream"],
+      colors: ["Terracotta"],
       sizes: ["One Size"],
       images: ["images/aclothes/handloom-silk-saree.jpg"],
       description: "Clay Earrings · Excellent condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -464,8 +464,8 @@
       popularity: 60,
       isNew: true,
       tags: ["boots","embroidered","ankle"],
-      colors: ["Black","Gold"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      colors: ["Black"],
+      sizes: ["UK 5"],
       images: ["images/aclothes/ankle-strap-flats.jpg"],
       description: "Embroidered Ankle-Strap Boots · Excellent condition · listed by Riya Chatterjee (riya.c). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -486,7 +486,7 @@
       isNew: false,
       tags: ["block-print","shirt","indigo"],
       colors: ["Indigo"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["36"],
       images: ["images/aclothes/indigo-block-print-dress.jpg"],
       description: "Indigo Block-Print Shirt · Like New condition · listed by Aditi Rao (aditi.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -507,7 +507,7 @@
       isNew: true,
       tags: ["hand-painted","graphic","tee"],
       colors: ["Multicolour"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["32"],
       images: ["images/aclothes/satin-slip-dress.jpg"],
       description: "Hand-Painted Dystopian T-Shirt · Fair condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -528,7 +528,7 @@
       isNew: false,
       tags: ["lounge","shirt","cotton"],
       colors: ["Cream"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["32"],
       images: ["images/aclothes/co-ord-lounge-set.jpg"],
       description: "Cotton Lounge Shirt · Like New condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -549,7 +549,7 @@
       isNew: false,
       tags: ["block-print","jeans","denim"],
       colors: ["Indigo"],
-      sizes: ["26","28","30","32","34"],
+      sizes: ["26"],
       images: ["images/aclothes/printed-midi-skirt.jpg"],
       description: "Block-Printed Jeans · Fair condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -570,7 +570,7 @@
       isNew: false,
       tags: ["sunflower","jeans","denim"],
       colors: ["Blue"],
-      sizes: ["26","28","30","32","34"],
+      sizes: ["26"],
       images: ["images/aclothes/chunky-bead-bracelet.jpg"],
       description: "Sunflower-Pattern Denim Jeans · Like New condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -611,8 +611,8 @@
       popularity: 62,
       isNew: false,
       tags: ["sneakers","hand-painted","custom"],
-      colors: ["White","Multicolour"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
+      colors: ["Multicolour"],
+      sizes: ["UK 6"],
       images: ["images/aclothes/matte-hoop-earrings.jpg"],
       description: "Hand-Painted Sneakers · Excellent condition · listed by Meera Nair (meera.n). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -654,7 +654,7 @@
       isNew: false,
       tags: ["custom","jeans","graphic"],
       colors: ["Indigo"],
-      sizes: ["26","28","30","32","34"],
+      sizes: ["26"],
       images: ["images/aclothes/spiderman-custom-tee.jpg"],
       description: "Custom Spider Jeans · Fair condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -675,7 +675,7 @@
       isNew: true,
       tags: ["painted","jorts","summer"],
       colors: ["Indigo"],
-      sizes: ["34","36","38"],
+      sizes: ["38"],
       images: ["images/aclothes/diy-painted-jorts.jpg"],
       description: "DIY Painted Denim Jorts · Excellent condition · listed by Rohit Desai (rohit.d). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -695,7 +695,7 @@
       popularity: 50,
       isNew: false,
       tags: ["handbag","dual-tone","everyday"],
-      colors: ["Black","Tan"],
+      colors: ["Black"],
       sizes: ["One Size"],
       images: ["images/aclothes/bafta-embroidered-top.jpg"],
       description: "Dual-Color Handbag · Good condition · listed by Sanya Gupta (sanya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -717,7 +717,7 @@
       isNew: true,
       tags: ["satin","drape","going-out"],
       colors: ["Cobalt"],
-      sizes: ["34","36","38"],
+      sizes: ["34"],
       images: ["images/aclothes/blue-satin-drape-tank.jpg"],
       description: "Blue Satin Drape Tank · Excellent condition · listed by Vivaan Joshi (vivaan.j). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -737,8 +737,8 @@
       popularity: 81,
       isNew: true,
       tags: ["sneakers","canvas","everyday"],
-      colors: ["White","Black"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9","UK 10"],
+      colors: ["Black"],
+      sizes: ["UK 10"],
       images: ["images/aclothes/classic-canvas-sneakers.jpg"],
       description: "Classic Canvas Sneakers · Excellent condition · listed by Tara Pillai (tara.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -759,7 +759,7 @@
       isNew: true,
       tags: ["wide-leg","high-waist","work"],
       colors: ["Beige"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["36"],
       images: ["images/aclothes/beige-highwaist-trousers.jpg"],
       description: "The Beige Fit High-Waist Trousers · Excellent condition · listed by Arjun Reddy (arjun.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -779,8 +779,8 @@
       popularity: 90,
       isNew: true,
       tags: ["halter","corset","maxi"],
-      colors: ["White","Black"],
-      sizes: ["32","34","36","38"],
+      colors: ["Black"],
+      sizes: ["38"],
       images: ["images/aclothes/striped-corset-maxi.jpg"],
       description: "Striped Halter Corset Maxi Dress · Fair condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -801,7 +801,7 @@
       isNew: false,
       tags: ["formal","trousers","blue"],
       colors: ["Blue"],
-      sizes: ["26","28","30","32","34"],
+      sizes: ["30"],
       images: ["images/aclothes/embroidered-cushion-cover.jpg"],
       description: "Blue Formal Pants · Like New condition · listed by Dev Malhotra (dev.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -821,8 +821,8 @@
       popularity: 56,
       isNew: true,
       tags: ["formal","striped","trousers"],
-      colors: ["Blue","Grey"],
-      sizes: ["26","28","30","32","34"],
+      colors: ["Grey"],
+      sizes: ["30"],
       images: ["images/aclothes/canvas-weekender-tote.jpg"],
       description: "Formal Striped Pants · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -843,7 +843,7 @@
       isNew: false,
       tags: ["denim","dress","classic"],
       colors: ["Denim"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["36"],
       images: ["images/aclothes/golden-jhumka-earrings.jpg"],
       description: "Classic Jean Dress · Fair condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -864,7 +864,7 @@
       isNew: false,
       tags: ["dress","summer","printed"],
       colors: ["Multicolour"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["40"],
       images: ["images/aclothes/printed-chiffon-scarf.jpg"],
       description: "Printed Summer Dress · Fair condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -885,7 +885,7 @@
       isNew: false,
       tags: ["co-ord","white","cotton"],
       colors: ["White"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["36"],
       images: ["images/aclothes/macrame-wall-hanging.jpg"],
       description: "White Co-ord Set · Excellent condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -906,7 +906,7 @@
       isNew: false,
       tags: ["top","brown","casual"],
       colors: ["Brown"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["32"],
       images: ["images/aclothes/terracotta-planter-pot.jpg"],
       description: "Brown Zara Top · Fair condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -927,7 +927,7 @@
       isNew: true,
       tags: ["co-ord","denim","set"],
       colors: ["Denim"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["40"],
       images: ["images/aclothes/paisley-cotton-duffel.jpg"],
       description: "Jean Co-ord Set · Fair condition · listed by Riya Chatterjee (riya.c). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -968,7 +968,7 @@
       popularity: 36,
       isNew: false,
       tags: ["bag","star","evening"],
-      colors: ["Gold","Black"],
+      colors: ["Black"],
       sizes: ["One Size"],
       images: ["images/aclothes/handloom-table-runner.jpg"],
       description: "Star Bag · Like New condition · listed by Ananya Iyer (ananya.i). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -989,8 +989,8 @@
       popularity: 69,
       isNew: true,
       tags: ["boots","bedazzled","party"],
-      colors: ["Silver","Black"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8","UK 9"],
+      colors: ["Silver"],
+      sizes: ["UK 9"],
       images: ["images/aclothes/waxed-canvas-backpack.jpg"],
       description: "Bedazzled Boots · Good condition · listed by Rhea Kapoor (rhea.k). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1011,7 +1011,7 @@
       isNew: false,
       tags: ["indian-print","flats","ethnic"],
       colors: ["Multicolour"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      sizes: ["UK 5"],
       images: ["images/aclothes/ceramic-coaster-set.jpg"],
       description: "Indian Print Shoes · Excellent condition · listed by Diya Menon (diya.m). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1031,7 +1031,7 @@
       popularity: 62,
       isNew: true,
       tags: ["backpack","canvas","travel"],
-      colors: ["Olive","Tan"],
+      colors: ["Tan"],
       sizes: ["One Size"],
       images: ["images/aclothes/canvas-travel-backpack.jpg"],
       description: "Canvas Travel Backpack · Like New condition · listed by Ishaan Verma (ishaan.v). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -1052,7 +1052,7 @@
       popularity: 74,
       isNew: true,
       tags: ["backpack","everyday","leather"],
-      colors: ["Black","Tan"],
+      colors: ["Tan"],
       sizes: ["One Size"],
       images: ["images/aclothes/everyday-leather-tote.jpg"],
       description: "Everyday Backpack · Like New condition · listed by Kabir Shah (kabir.s). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -1115,7 +1115,7 @@
       popularity: 63,
       isNew: false,
       tags: ["lamp","candle","ambient"],
-      colors: ["Gold","Black"],
+      colors: ["Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/candle-warmer-lamp.jpg"],
       description: "Candle Warmer Lamp · Like New condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -1241,7 +1241,7 @@
       popularity: 66,
       isNew: true,
       tags: ["celestial","earrings","gold"],
-      colors: ["Gold","Silver"],
+      colors: ["Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/bloom-print-kurta.jpg"],
       description: "Sun & Moon Earrings · Excellent condition · listed by Zoya Sheikh (zoya.s). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -1283,8 +1283,8 @@
       popularity: 72,
       isNew: true,
       tags: ["co-ord","bandhani","silk-touch"],
-      colors: ["Red","Yellow"],
-      sizes: ["34","36","38","40"],
+      colors: ["Yellow"],
+      sizes: ["40"],
       images: ["images/aclothes/bandhani-co-ord.jpg"],
       description: "Bandhani Print Co-ord · Excellent condition · listed by Kavya Rao (kavya.r). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1305,7 +1305,7 @@
       isNew: false,
       tags: ["maxi-skirt","indian-print","ethnic"],
       colors: ["Multicolour"],
-      sizes: ["32","34","36","38","40"],
+      sizes: ["38"],
       images: ["images/aclothes/leather-crossbody-mini.jpg"],
       description: "Indian Maxi Skirt · Excellent condition · listed by Yash Patel (yash.p). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1325,8 +1325,8 @@
       popularity: 68,
       isNew: true,
       tags: ["heels","clockwork","statement"],
-      colors: ["Gold","Black"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      colors: ["Gold"],
+      sizes: ["UK 5"],
       images: ["images/aclothes/oxidised-jhumka-set.jpg"],
       description: "Clockwork Heels · Excellent condition · listed by Mira Sen (mira.s). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1347,7 +1347,7 @@
       isNew: false,
       tags: ["heels","mesh","party"],
       colors: ["Silver"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      sizes: ["UK 4"],
       images: ["images/aclothes/block-print-cushion-duo.jpg"],
       description: "Silver Mesh Heels · Like New condition · listed by Neel Bhatia (neel.b). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1368,7 +1368,7 @@
       isNew: false,
       tags: ["heels","leather","maroon"],
       colors: ["Maroon"],
-      sizes: ["UK 3","UK 4","UK 5","UK 6","UK 7","UK 8"],
+      sizes: ["UK 5"],
       images: ["images/aclothes/chiffon-dupatta.jpg"],
       description: "Maroon Fish-Eye Leather Heels · Excellent condition · listed by Ananya Gokhale (ananya.g). Pick up on campus: coordinate the handoff with the seller after checkout."
     },
@@ -1556,7 +1556,7 @@
       popularity: 52,
       isNew: false,
       tags: ["phone-ring","vintage","accessory"],
-      colors: ["Gold","Silver"],
+      colors: ["Gold"],
       sizes: ["One Size"],
       images: ["images/aclothes/lorelai-co-ord.jpg"],
       description: "Vintage Phone Ring · Excellent condition · listed by Nikhil Bose (nikhil.b). Pick up on campus: coordinate the handoff with the seller after checkout."
@@ -1577,7 +1577,7 @@
       popularity: 67,
       isNew: true,
       tags: ["lamp","vintage","lily"],
-      colors: ["Gold","Cream"],
+      colors: ["Cream"],
       sizes: ["One Size"],
       images: ["images/aclothes/vintage-lily-lamp.jpg"],
       description: "Vintage Lily Table Lamp · Excellent condition · listed by Aisha Khan (aisha.k). Pick up on campus: coordinate the handoff with the seller after checkout."

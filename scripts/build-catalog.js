@@ -229,9 +229,13 @@ for (const e of CATALOG) {
   const condition = CONDITIONS[h % CONDITIONS.length];
   const listedDaysAgo = h % 30;
 
-  /* Indian standard sizes: convert letter sizes to Indian numerics */
+  /* Indian standard sizes: convert letter sizes to Indian numerics.
+     A resale listing is one item, so keep a single size (and colour). */
   const SIZE_MAP = { XS: '32', S: '34', M: '36', L: '38', XL: '40', XXL: '42' };
-  const sizes = e.sz.map(s => SIZE_MAP[s] || s);
+  let sizes = e.sz.map(s => SIZE_MAP[s] || s);
+  if (sizes.length > 1) sizes = [sizes[h % sizes.length]];
+  let colors = e.co.slice();
+  if (colors.length > 1) colors = [colors[h % colors.length]];
 
   /* student-friendly resale price */
   const price = resalePrice(e.c, h);
@@ -255,7 +259,7 @@ for (const e of CATALOG) {
       popularity: ${e.po},
       isNew: ${e.isNew},
       tags: ${q(e.t)},
-      colors: ${q(e.co)},
+      colors: ${q(colors)},
       sizes: ${q(sizes)},
       images: [${q(image)}],
       description: ${q(desc)}

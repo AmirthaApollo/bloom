@@ -185,16 +185,12 @@
     const wishClass = window.Wishlist && Wishlist.has(p.id) ? ' liked' : '';
     const heart = `<button class="wish-heart${wishClass}" data-wid="${p.id}" aria-label="Save listing" title="Save listing">${wrap('heart', 'wish-ico')}</button>`;
     const badges = `${App.conditionChip(p)}${p.listedDaysAgo != null && p.listedDaysAgo <= 2 ? '<span class="badge badge-new">Just listed</span>' : ''}`;
-    const actions = (opts.list ? `
-      <div class="list-body-row">
+    const actionsRow = `
+      <div class="card-actions-row">
         <button class="btn btn-primary btn-sm" data-add="${p.id}">Add to Cart</button>
         <button class="btn btn-outline btn-sm" data-buy="${p.id}">Buy Now</button>
-        <button class="btn btn-ghost btn-sm wish-inline" data-wid="${p.id}">${wrap('heart', 'wish-ico')} Save</button>
-      </div>` : `
-      <div class="card-actions">
-        <button class="btn btn-ghost btn-sm" data-buy="${p.id}">Buy Now</button>
-        <button class="card-actions-add" data-add="${p.id}" aria-label="Add to cart" title="Add to cart">Add to Cart ${wrap('bag')}</button>
-      </div>`);
+        ${opts.list ? `<button class="btn btn-ghost btn-sm wish-inline" data-wid="${p.id}">${wrap('heart', 'wish-ico')} Save</button>` : ''}
+      </div>`;
     const name = `<a class="name" href="product.html?id=${p.id}">${App.esc(p.name)}</a>`;
     const cat = window.CATEGORY_META[p.category] ? window.CATEGORY_META[p.category].name : p.category;
     return `
@@ -205,13 +201,13 @@
         </a>
         <div class="card-badges">${badges}</div>
         ${heart}
-        ${actions}
       </div>
       <div class="card-body">
         <div class="cat">${App.esc(cat)}</div>
         ${name}
         <div class="card-price"><span class="price-now">${App.money(p.price)}</span></div>
         ${App.sellerLine(p)}
+        ${actionsRow}
       </div>
     </article>`;
   };
@@ -558,6 +554,16 @@
     const fill = (sel, list) => { const el = document.querySelector(sel); if (el) el.innerHTML = list.map(p => App.renderCard(p)).join(''); };
 
     const recent = byRecent(avail);
+
+    /* hero collage: four fresh listings */
+    const collage = document.querySelector('#hero-collage');
+    if (collage) {
+      collage.innerHTML = recent.slice(0, 4).map(p => `
+        <a class="hero-tile" href="product.html?id=${p.id}" aria-label="${App.esc(p.name)}">
+          <img class="img-soft" src="${p.images[0]}" alt="${App.esc(p.name)}" loading="lazy">
+          <span class="tile-tag">${App.money(p.price)}</span>
+        </a>`).join('');
+    }
 
     /* Just Listed — the newest four */
     fill('.home-just-grid', recent.slice(0, 4));

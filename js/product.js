@@ -23,9 +23,7 @@
 
   const gallery = document.querySelector('.gallery-main img');
   const thumbsEl = document.querySelector('.gallery-thumbs');
-  const sizeChips = document.querySelector('.size-chips');
-  const colorChips = document.querySelector('.color-chips');
-  const colorValue = document.querySelector('.color-value');
+  const attrsEl = document.querySelector('#p-attrs');
   const qtyVal = document.querySelector('.qty-val');
 
   /* ---------- Gallery ---------- */
@@ -51,7 +49,8 @@
   document.querySelector('.product-info h1').textContent = p.name;
   const pBrandEl = document.querySelector('.p-brand');
   if (p.seller) {
-    pBrandEl.innerHTML = `Listed by <b>${App.esc(p.seller.name)}</b> <span class="p-brand-rate">@${App.esc(p.seller.username)}</span>`;
+    const salesTxt = `${p.seller.sales} ${App.maybePlural(p.seller.sales, 'sale')}`;
+    pBrandEl.innerHTML = `Listed by <b>${App.esc(p.seller.name)}</b> <span class="p-brand-rate">${salesTxt} · @${App.esc(p.seller.username)}</span>`;
   } else { pBrandEl.textContent = 'Student listing'; }
   const tagsEl = document.querySelector('.p-tags');
   tagsEl.innerHTML = (p.tags || []).map(t => `<span class="p-tag">${App.esc(t)}</span>`).join('');
@@ -78,9 +77,6 @@
 
   priceEl.innerHTML = `<span class="price-now">${App.money(p.price)}</span>`;
 
-  const condEl = document.querySelector('.p-cond-value');
-  if (condEl) condEl.innerHTML = App.conditionChip(p) || '—';
-
   document.title = `${p.name} · Bloom`;
 
   const stockEl = document.querySelector('.p-stock');
@@ -99,43 +95,16 @@
     as.querySelector('.as-time').textContent = seller.responseTime;
   }
 
-  /* ---------- sizes ---------- */
-  const hasSizes = p.sizes && p.sizes.length;
-  if (!hasSizes) {
-    const label = sizeChips ? sizeChips.previousElementSibling : null;
-    if (label) label.style.display = 'none';
-    if (sizeChips) sizeChips.style.display = 'none';
-  } else if (sizeChips) {
-    sizeChips.innerHTML = p.sizes.map(sz => {
-      const soldOut = hash(p.id + sz) % 5 === 0 && p.sizes.length > 1;
-      return `<button class="chip ${S.size === sz ? 'on' : ''}" data-size="${App.esc(sz)}" ${soldOut ? 'disabled' : ''}>${App.esc(sz)}</button>`;
-    }).join('');
-    document.querySelectorAll('.size-chips .chip').forEach(b => b.addEventListener('click', () => {
-      if (b.disabled) return;
-      S.size = b.getAttribute('data-size');
-      document.querySelectorAll('.size-chips .chip').forEach(x => x.classList.toggle('on', x === b));
-    }));
-  }
-
-  /* ---------- colors ---------- */
-  const COLOR_HEX = window.colorHex;
-  const hasColors = p.colors && p.colors.length;
-  if (!hasColors) {
-    const label = colorChips ? colorChips.previousElementSibling : null;
-    if (label) label.style.display = 'none';
-    if (colorChips) colorChips.style.display = 'none';
-    if (colorValue) colorValue.style.display = 'none';
-  } else if (colorChips) {
-    colorChips.innerHTML = p.colors.map(c => {
-      const hex = COLOR_HEX(c);
-      return `<button class="color-chip ${S.color === c ? 'on' : ''}" data-color="${App.esc(c)}" title="${App.esc(c)}" style="background:${hex}"></button>`;
-    }).join('');
-    document.querySelectorAll('.color-chips .color-chip').forEach(b => b.addEventListener('click', () => {
-      S.color = b.getAttribute('data-color');
-      document.querySelectorAll('.color-chips .color-chip').forEach(x => x.classList.toggle('on', x === b));
-      if (colorValue) colorValue.textContent = `Colour: ${S.color}`;
-    }));
-    if (colorValue) colorValue.textContent = `Colour: ${S.color}`;
+  /* ---------- attributes on one line: condition · size · colour (shown, not selected) ---------- */
+  if (attrsEl) {
+    const parts = [];
+    if (p.condition) parts.push(`<span class="attr"><b>Condition</b>${App.conditionChip(p)}</span>`);
+    if (p.sizes && p.sizes.length) parts.push(`<span class="attr"><b>Size</b><span class="attr-val">${p.sizes.map(sz => App.esc(sz)).join(', ')}</span></span>`);
+    if (p.colors && p.colors.length) {
+      const sw = p.colors.map(c => `<span class="color-dot" style="background:${window.colorHex(c)}"></span>`).join('');
+      parts.push(`<span class="attr"><b>Colour</b><span class="attr-val">${sw}${p.colors.map(c => App.esc(c)).join(', ')}</span></span>`);
+    }
+    attrsEl.innerHTML = parts.join('');
   }
 
   /* ---------- Indian size guide dropdown ---------- */

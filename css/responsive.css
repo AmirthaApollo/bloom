@@ -180,3 +180,7 @@
   .info-section { padding: 22px 20px; }
   .track-form .btn { width: 100%; }
 }
+@media (max-width: 520px) {
+  .card-actions-row { gap: 6px; }
+  .card-actions-row .btn { padding: 9px 6px; font-size: .72rem; white-space: normal; line-height: 1.12; }
+}
